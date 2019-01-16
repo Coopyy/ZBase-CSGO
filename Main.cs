@@ -12,6 +12,7 @@ namespace ZBase
 {
     public class Main
     {
+        public static RootObject O;
         public static Settings S = new Settings();
         public static bool RunStartup()
         {

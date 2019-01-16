@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -51,6 +54,7 @@
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\Keys.cs" />
     <Compile Include="Classes\Mouse.cs" />
+    <Compile Include="Classes\Offsets.cs" />
     <Compile Include="Classes\Settings.cs" />
     <Compile Include="Classes\Structs.cs" />
     <Compile Include="Main.cs" />
@@ -64,7 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Globals.cs" />
     <Compile Include="Utilities\Memory.cs" />
-    <Compile Include="Utilities\Offsets.cs" />
+    <Compile Include="Utilities\OffsetUpdater.cs" />
     <Compile Include="Utilities\Tools.cs" />
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -78,6 +82,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

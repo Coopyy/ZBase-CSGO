@@ -1,5 +1,4 @@
 ﻿using ZBase.Classes;
-using hazedumper;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,9 +15,9 @@ namespace ZBase.Utilities
         {
             while (true)
             {
-                Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.Client + signatures.dwLocalPlayer));
-                Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.Client + signatures.dwGlowObjectManager);
-                Globals.ClientState = Memory.ReadMemory<int>((int)Memory.Client + signatures.dwClientState);
+                Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwLocalPlayer));
+                Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwGlowObjectManager);
+                Globals.ClientState = Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwClientState);
 
                 // Get Players
                 var oldEntityList = new List<Entity>();
@@ -35,24 +34,24 @@ namespace ZBase.Utilities
 
         public static int GetEntityBase(int PlayerLoopID)
         {
-            return Memory.ReadMemory<int>((int)Memory.Client + signatures.dwEntityList + (PlayerLoopID * 0x10));
+            return Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwEntityList + (PlayerLoopID * 0x10));
         }
 
         public static int GetEntityBaseFromCrosshair(int CrosshairID)
         {
-            return Memory.ReadMemory<int>((int)Memory.Client + signatures.dwEntityList + (CrosshairID - 1) * 0x10);
+            return Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwEntityList + (CrosshairID - 1) * 0x10);
         }
 
         public static void Shoot()
         {
-            Memory.WriteMemory<int>((int)Memory.Client + signatures.dwForceAttack, 5);
+            Memory.WriteMemory<int>((int)Memory.Client + Main.O.signatures.dwForceAttack, 5);
             Thread.Sleep(20);
-            Memory.WriteMemory<int>((int)Memory.Client + signatures.dwForceAttack, 4);
+            Memory.WriteMemory<int>((int)Memory.Client + Main.O.signatures.dwForceAttack, 4);
         }
 
         public static void Jump()
         {
-            Memory.WriteMemory<int>((int)Memory.Client + signatures.dwForceJump, 6);
+            Memory.WriteMemory<int>((int)Memory.Client + Main.O.signatures.dwForceJump, 6);
         }
 
         // for a health esp gradient

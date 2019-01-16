@@ -20,6 +20,7 @@ namespace ZBase
             InitializeComponent();
             if (Main.RunStartup())
             {
+                OffsetUpdater.UpdateOffsets();
                 #region Start Threads
                 // found the process and everything, lets start our cheats in a new thread
                 new Thread(() =>
@@ -54,8 +55,6 @@ namespace ZBase
             while (true)
             {
                 Main.S.BunnyhopEnabled = BunnyhopCheck.Checked;
-
-                //here checks if we press insert, change it to the opposite visibility
                 if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
                     Visible = !Visible;
 

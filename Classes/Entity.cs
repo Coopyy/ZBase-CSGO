@@ -1,5 +1,4 @@
 ﻿using ZBase.Utilities;
-using hazedumper;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,7 +22,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_iHealth);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iHealth);
             }
         }
 
@@ -31,7 +30,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_iGlowIndex);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iGlowIndex);
             }
         }
 
@@ -39,7 +38,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_iTeamNum);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iTeamNum);
             }
         }
 
@@ -47,7 +46,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_fFlags);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_fFlags);
             }
         }
 
@@ -63,7 +62,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + netvars.m_vecOrigin);
+                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecOrigin);
             }
         }
 
@@ -71,11 +70,11 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<bool>(EntityBase + netvars.m_bSpotted);
+                return Memory.ReadMemory<bool>(EntityBase + Main.O.netvars.m_bSpotted);
             }
             set
             {
-                Memory.WriteMemory<bool>(EntityBase + netvars.m_bSpotted, Convert.ToByte(value));
+                Memory.WriteMemory<bool>(EntityBase + Main.O.netvars.m_bSpotted, Convert.ToByte(value));
             }
         }
 
@@ -83,11 +82,11 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_flFlashDuration);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_flFlashDuration);
             }
             set
             {
-                Memory.WriteMemory<int>(EntityBase + netvars.m_flFlashDuration, value);
+                Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_flFlashDuration, value);
             }
         }
 
@@ -95,7 +94,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<bool>(EntityBase + signatures.m_bDormant);
+                return Memory.ReadMemory<bool>(EntityBase + Main.O.signatures.m_bDormant);
             }
         }
 
@@ -103,7 +102,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_iCrosshairId);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iCrosshairId);
             }
         }
 
@@ -125,10 +124,10 @@ namespace ZBase.Classes
 
         public void Cham(Color color)
         {
-            Memory.WriteMemory<int>(EntityBase + netvars.m_clrRender, color.R);
-            Memory.WriteMemory<int>(EntityBase + netvars.m_clrRender + 1, color.G);
-            Memory.WriteMemory<int>(EntityBase + netvars.m_clrRender + 2, color.B);
-            Memory.WriteMemory<int>(EntityBase + netvars.m_clrRender + 3, color.A);
+            Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender, color.R);
+            Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender + 1, color.G);
+            Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender + 2, color.B);
+            Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender + 3, color.A);
         }
         public void ResetChams()
         {
@@ -173,35 +172,35 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + netvars.m_viewPunchAngle);
+                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_viewPunchAngle);
             }
         }
         public int ShotsFired
         {
             get
             {
-                return Memory.ReadMemory<int>(EntityBase + netvars.m_iShotsFired);
+                return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iShotsFired);
             }
         }
         public Vector3 Velocity
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + netvars.m_vecVelocity);
+                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecVelocity);
             }
         }
         public bool Immune
         {
             get
             {
-                return Memory.ReadMemory<bool>(EntityBase + netvars.m_bGunGameImmunity);
+                return Memory.ReadMemory<bool>(EntityBase + Main.O.netvars.m_bGunGameImmunity);
             }
         }
         public bool Scoped
         {
             get
             {
-                return Memory.ReadMemory<bool>(EntityBase + netvars.m_bIsScoped);
+                return Memory.ReadMemory<bool>(EntityBase + Main.O.netvars.m_bIsScoped);
             }
         }
         public bool IsStill
