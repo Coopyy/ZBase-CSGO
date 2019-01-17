@@ -66,6 +66,14 @@ namespace ZBase.Classes
             }
         }
 
+        public Vector3 HeadPosition
+        {
+            get
+            {
+                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecViewOffset);
+            }
+        }
+
         public bool Spotted
         {
             get
@@ -137,7 +145,7 @@ namespace ZBase.Classes
         {
             get
             {
-                if (Health > 0)
+                if (Health > 0 && Health <= 100)
                     return true;
                 return false;
             }
@@ -153,6 +161,19 @@ namespace ZBase.Classes
             }
         }
 
+        public bool IsPlayer
+        {
+            get
+            {
+                if (Team == 2 || Team == 3)
+                    return true;
+                else if (Team == 0 || Team == 1)
+                    return false;
+                else
+                    return false;
+            }
+        }
+
         public bool Valid
         {
             get
@@ -161,9 +182,8 @@ namespace ZBase.Classes
                     return false;
                 if (Dead)
                     return false;
-                if (Team == 0 || Team == 1)
+                if (!IsPlayer)
                     return false;
-
                 return true;
             }
         }
