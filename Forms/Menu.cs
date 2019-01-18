@@ -38,6 +38,16 @@ namespace ZBase
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
+                    while (true)
+                    {
+                        for (int i = 0; i < 16; i++)
+                            Globals.ViewMatrix[i] = Memory.ReadMemory<float>((int)Memory.Client + Main.O.signatures.dwViewMatrix + (i * 0x4));
+                    }
+                }).Start();
+
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
                     Bunnyhop.Run();
                 }).Start();
                 #endregion

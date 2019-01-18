@@ -12,6 +12,7 @@ namespace ZBase.Utilities
         public static Entity LocalPlayer;
         public static int GlowObjectManager;
         public static int ClientState;
+        public static float[] ViewMatrix = new float[16];
         public static List<Entity> EntityList = new List<Entity>();
     }
 }

@@ -70,7 +70,11 @@ namespace ZBase.Classes
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecViewOffset);
+                int bonematrix = Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_dwBoneMatrix);
+                float x = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x0C);
+                float y = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x1C);
+                float z = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x2C);
+                return new Vector3(x, y, z);
             }
         }
 
