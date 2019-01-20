@@ -70,12 +70,17 @@ namespace ZBase.Classes
         {
             get
             {
-                int bonematrix = Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_dwBoneMatrix);
-                float x = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x0C);
-                float y = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x1C);
-                float z = Memory.ReadMemory<float>(bonematrix + 0x30 * 8 + 0x2C);
-                return new Vector3(x, y, z);
+                return GetBonePosition(8);
             }
+        }
+
+        public Vector3 GetBonePosition(int BoneID)
+        {
+            int bonematrix = Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_dwBoneMatrix);
+            float x = Memory.ReadMemory<float>(bonematrix + 0x30 * BoneID + 0x0C);
+            float y = Memory.ReadMemory<float>(bonematrix + 0x30 * BoneID + 0x1C);
+            float z = Memory.ReadMemory<float>(bonematrix + 0x30 * BoneID + 0x2C);
+            return new Vector3(x, y, z);
         }
 
         public bool Spotted
@@ -136,6 +141,7 @@ namespace ZBase.Classes
 
         public void Cham(Color color)
         {
+            // these only show while visible
             Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender, color.R);
             Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender + 1, color.G);
             Memory.WriteMemory<int>(EntityBase + Main.O.netvars.m_clrRender + 2, color.B);
@@ -159,7 +165,7 @@ namespace ZBase.Classes
         {
             get
             {
-                if (!(Health > 0))
+                if (!Alive)
                     return true;
                 return false;
             }
@@ -184,6 +190,8 @@ namespace ZBase.Classes
             {
                 if (Dormant)
                     return false;
+                if (Immune)
+                    return false;
                 if (Dead)
                     return false;
                 if (!IsPlayer)
@@ -192,11 +200,11 @@ namespace ZBase.Classes
             }
         }
 
-        public Vector3 AimPunch
+        public Vector2 AimPunch
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_viewPunchAngle);
+                return Memory.ReadMemory<Vector2>(EntityBase + Main.O.netvars.m_aimPunchAngle);
             }
         }
         public int ShotsFired
@@ -235,6 +243,13 @@ namespace ZBase.Classes
                     return true;
                 else
                     return false;
+            }
+        }
+        public float Distance
+        {
+            get
+            {
+                return Vector3.Distance(Globals.LocalPlayer.Position, HeadPosition);
             }
         }
     }

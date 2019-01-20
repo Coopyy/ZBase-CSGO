@@ -36,4 +36,9 @@ namespace ZBase.Classes
         [FieldOffset(0x2C)]
         public bool m_bFullBloom;
     };
+
+    public struct RECT
+    {
+        public int left, top, right, bottom;
+    }
 }

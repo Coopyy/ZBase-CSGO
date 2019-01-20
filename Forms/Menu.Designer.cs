@@ -35,6 +35,7 @@
             this.GithubBTN = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.OverlayBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DiscordBTN
@@ -89,25 +90,36 @@
             // 
             this.label3.Location = new System.Drawing.Point(9, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(360, 23);
+            this.label3.Size = new System.Drawing.Size(360, 39);
             this.label3.TabIndex = 5;
-            this.label3.Text = "A function to show/hide the menu is already integrated. use Insert";
+            this.label3.Text = "A function to show/hide the menu is already integrated. use Insert\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(9, 128);
+            this.label4.Location = new System.Drawing.Point(9, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(360, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Have Fun!";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // OverlayBtn
+            // 
+            this.OverlayBtn.Location = new System.Drawing.Point(276, 180);
+            this.OverlayBtn.Name = "OverlayBtn";
+            this.OverlayBtn.Size = new System.Drawing.Size(93, 23);
+            this.OverlayBtn.TabIndex = 7;
+            this.OverlayBtn.Text = "Show Overlay";
+            this.OverlayBtn.UseVisualStyleBackColor = true;
+            this.OverlayBtn.Click += new System.EventHandler(this.OverlayBtn_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 213);
+            this.Controls.Add(this.OverlayBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GithubBTN);
@@ -132,6 +144,7 @@
         private System.Windows.Forms.Button GithubBTN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button OverlayBtn;
     }
 }
 

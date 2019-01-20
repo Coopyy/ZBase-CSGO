@@ -9,12 +9,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZBase.Cheats;
+using ZBase.Forms;
 using ZBase.Utilities;
 
 namespace ZBase
 {
     public partial class Menu : Form
     {
+        Overlay overlay = new Overlay();
         public Menu()
         {
             InitializeComponent();
@@ -33,16 +35,6 @@ namespace ZBase
                 {
                     Thread.CurrentThread.IsBackground = true;
                     Tools.InitializeGlobals();
-                }).Start();
-
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    while (true)
-                    {
-                        for (int i = 0; i < 16; i++)
-                            Globals.ViewMatrix[i] = Memory.ReadMemory<float>((int)Memory.Client + Main.O.signatures.dwViewMatrix + (i * 0x4));
-                    }
                 }).Start();
 
                 new Thread(() =>
@@ -80,6 +72,11 @@ namespace ZBase
         private void GithubBTN_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Coopyy/ZBase-CSGO");
+        }
+
+        private void OverlayBtn_Click(object sender, EventArgs e)
+        {
+            overlay.Show();
         }
     }
 }

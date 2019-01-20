@@ -57,6 +57,12 @@
     <Compile Include="Classes\Offsets.cs" />
     <Compile Include="Classes\Settings.cs" />
     <Compile Include="Classes\Structs.cs" />
+    <Compile Include="Forms\Overlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Overlay.Designer.cs">
+      <DependentUpon>Overlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
@@ -72,6 +78,9 @@
     <Compile Include="Utilities\Tools.cs" />
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Overlay.resx">
+      <DependentUpon>Overlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

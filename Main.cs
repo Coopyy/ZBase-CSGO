@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,14 @@ namespace ZBase
 {
     public class Main
     {
+        RECT rect;
+        public const string WindName = "Counter-Strike: Global Offensive";
+        IntPtr handle = Memory.FindWindow(null, WindName);
+
+        public static Size ScreenSize;
+        public static Vector2 MidScreen;
+        public static RECT ScreenRect;
+
         public static RootObject O;
         public static Settings S = new Settings();
         public static bool RunStartup()
