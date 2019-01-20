@@ -45,6 +45,7 @@ namespace ZBase.Forms
         {
             while (true)
             {
+                Memory.SetWindowLong(Handle, -20, Memory.GetWindowLong(Handle, -20) | 0x80000 | 0x20); // makes it so you can click through it
                 Size = Main.ScreenSize;
                 Top = Main.ScreenRect.top;
                 Left = Main.ScreenRect.left;
