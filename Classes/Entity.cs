@@ -190,8 +190,6 @@ namespace ZBase.Classes
             {
                 if (Dormant)
                     return false;
-                if (Immune)
-                    return false;
                 if (Dead)
                     return false;
                 if (!IsPlayer)
@@ -219,13 +217,6 @@ namespace ZBase.Classes
             get
             {
                 return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecVelocity);
-            }
-        }
-        public bool Immune
-        {
-            get
-            {
-                return Memory.ReadMemory<bool>(EntityBase + Main.O.netvars.m_bGunGameImmunity);
             }
         }
         public bool Scoped
