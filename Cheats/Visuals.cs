@@ -36,7 +36,7 @@ namespace ZBase.Cheats
             {
                 BypassTopmost = false,
                 Height = (int)(Main.ScreenSize.Height),
-                Width = (int)(Main.ScreenSize.Height),
+                Width = (int)(Main.ScreenSize.Width),
                 WindowTitle = "Overlay",
                 X = 0,
                 Y = 0,
