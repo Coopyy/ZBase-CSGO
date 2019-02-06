@@ -19,9 +19,8 @@ namespace ZBase.Cheats
                     if (Tools.HoldingKey(Keys.VK_SPACE)) // while holding space
                     {
                         // Flags show if you are on the ground or not. 257 is standing on the ground, and 263 is crouching on the ground.
-                        if (Globals.LocalPlayer.Flags == 257 || Globals.LocalPlayer.Flags == 263 && !Globals.LocalPlayer.IsStill)
+                        if (Globals.LocalPlayer.Flags == 257 || Globals.LocalPlayer.Flags == 263)
                         {
-                            // stuff checks out. Jump!
                             Tools.Jump();
                         }
                     }

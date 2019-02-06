@@ -9,14 +9,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZBase.Cheats;
-using ZBase.Forms;
 using ZBase.Utilities;
 
 namespace ZBase
 {
     public partial class Menu : Form
     {
-        Overlay overlay = new Overlay();
         public Menu()
         {
             InitializeComponent();
@@ -42,6 +40,8 @@ namespace ZBase
                     Thread.CurrentThread.IsBackground = true;
                     Bunnyhop.Run();
                 }).Start();
+
+                Visuals v = new Visuals();
                 #endregion
             }
         }
@@ -57,6 +57,7 @@ namespace ZBase
             while (true)
             {
                 Main.S.BunnyhopEnabled = BunnyhopCheck.Checked;
+                Main.S.ESP = ESPCheck.Checked;
                 if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
                     Visible = !Visible;
 
@@ -66,17 +67,12 @@ namespace ZBase
 
         private void DiscordBTN_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://discord.gg/gyZR9p8");
+            System.Diagnostics.Process.Start("https://discordapp.com/invite/cFmAYvm");
         }
 
         private void GithubBTN_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Coopyy/ZBase-CSGO");
-        }
-
-        private void OverlayBtn_Click(object sender, EventArgs e)
-        {
-            overlay.Show();
         }
     }
 }

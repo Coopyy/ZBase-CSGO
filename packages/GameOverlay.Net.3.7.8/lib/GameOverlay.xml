@@ -1,0 +1,3351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameOverlay</name>
+    </assembly>
+    <members>
+        <member name="T:GameOverlay.Graphics.Containers.ConcurrentShapeContainer">
+            <summary>
+            </summary>
+            <seealso cref="T:GameOverlay.Graphics.IShapeContainer" />
+        </member>
+        <member name="M:GameOverlay.Graphics.Containers.ConcurrentShapeContainer.#ctor">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Containers.ConcurrentShapeContainer" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Containers.ConcurrentShapeContainer.#ctor(System.Collections.Generic.IEnumerable{GameOverlay.Graphics.IShape})">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Containers.ConcurrentShapeContainer" /> class.
+            </summary>
+            <param name="collection">
+                The collection whose elements are copied to the new
+                <see cref="T:System.Collections.Concurrent.ConcurrentBag`1" />.
+            </param>
+        </member>
+        <member name="T:GameOverlay.Graphics.Containers.ShapeContainer">
+            <summary>
+            </summary>
+            <seealso cref="T:GameOverlay.Graphics.IShapeContainer" />
+        </member>
+        <member name="M:GameOverlay.Graphics.Containers.ShapeContainer.#ctor">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Containers.ShapeContainer" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Containers.ShapeContainer.#ctor(System.Int32)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Containers.ShapeContainer" /> class.
+            </summary>
+            <param name="capacity">The number of elements that the new list can initially store.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Containers.ShapeContainer.#ctor(System.Collections.Generic.IEnumerable{GameOverlay.Graphics.IShape})">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Containers.ShapeContainer" /> class.
+            </summary>
+            <param name="collection">The collection whose elements are copied to the new list.</param>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DLinearGradientBrush">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DLinearGradientBrush.Brush">
+            <summary>
+            The brush
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DLinearGradientBrush.StartPoint">
+            <summary>
+            Gets or sets the start point.
+            </summary>
+            <value>
+            The start point.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DLinearGradientBrush.EndPoint">
+            <summary>
+            Gets or sets the end point.
+            </summary>
+            <value>
+            The end point.
+            </value>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:GameOverlay.Graphics.D2DLinearGradientBrush"/> class from being created.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.#ctor(SharpDX.Direct2D1.RenderTarget,GameOverlay.Graphics.D2DColor[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DLinearGradientBrush"/> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="colors">The colors.</param>
+            <exception cref="T:System.ArgumentNullException">
+            device
+            or
+            colors
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.#ctor(GameOverlay.Graphics.D2DDevice,GameOverlay.Graphics.D2DColor[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DLinearGradientBrush"/> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="colors">The colors.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DLinearGradientBrush"/> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.SetRange(GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.Primitives.Point)">
+            <summary>
+            Sets the range.
+            </summary>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.SetRange(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the range.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.GetBrush">
+            <summary>
+            Gets the brush.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.SetBrush(SharpDX.Direct2D1.Brush)">
+            <summary>
+            Sets the brush.
+            </summary>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DLinearGradientBrush.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.ID2DBrush">
+            <inheritdoc />
+            <summary>
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="M:GameOverlay.Graphics.ID2DBrush.GetBrush">
+            <summary>
+                Gets the brush.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.ID2DBrush.SetBrush(SharpDX.Direct2D1.Brush)">
+            <summary>
+                Sets the brush.
+            </summary>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="T:GameOverlay.Graphics.IShape">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.IShape.Draw(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Draws the specified device.
+            </summary>
+            <param name="device">The device.</param>
+        </member>
+        <member name="T:GameOverlay.Graphics.IShapeContainer">
+            <inheritdoc />
+            <summary>
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.BezierCurve">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.BezierCurve.Draw(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Draws the specified device.
+            </summary>
+            <param name="device">The device.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Circle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Circle.Location">
+            <summary>
+                The location
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Circle.Radius">
+            <summary>
+                The radius
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.#ctor(GameOverlay.Graphics.Primitives.Point,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Circle" /> struct.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Circle" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.#ctor(GameOverlay.Graphics.Primitives.Point,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Circle" /> struct.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Circle" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Circle.op_Implicit(GameOverlay.Graphics.Primitives.Circle)~SharpDX.Direct2D1.Ellipse">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.Circle" /> to <see cref="T:SharpDX.Direct2D1.Ellipse" />.
+            </summary>
+            <param name="circle">The circle.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Curve">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Ellipse">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Ellipse.Location">
+            <summary>
+                The location
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Ellipse.RadiusX">
+            <summary>
+                The radius x
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Ellipse.RadiusY">
+            <summary>
+                The radius y
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.#ctor(GameOverlay.Graphics.Primitives.Point,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Ellipse" /> struct.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.#ctor(GameOverlay.Graphics.Primitives.Point,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Ellipse" /> struct.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Ellipse" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Ellipse" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Ellipse.op_Implicit(GameOverlay.Graphics.Primitives.Ellipse)~SharpDX.Direct2D1.Ellipse">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.Ellipse" /> to <see cref="T:SharpDX.Direct2D1.Ellipse" />.
+            </summary>
+            <param name="ellipse">The ellipse.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Geometry">
+            <inheritdoc />
+            <summary>
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.#ctor(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Geometry" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <exception cref="T:System.ArgumentNullException">device</exception>
+            <exception cref="T:System.InvalidOperationException">The render target needs to be initialized first</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.Primitives.Geometry" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.BeginFigure(GameOverlay.Graphics.Primitives.Point,System.Boolean)">
+            <summary>
+                Begins the figure.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="fill">if set to <c>true</c> [fill].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.BeginFigure(GameOverlay.Graphics.Primitives.Line,System.Boolean)">
+            <summary>
+                Begins the figure.
+            </summary>
+            <param name="line">The line.</param>
+            <param name="fill">if set to <c>true</c> [fill].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.EndFigure(System.Boolean)">
+            <summary>
+                Ends the figure.
+            </summary>
+            <param name="closed">if set to <c>true</c> [closed].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.AddPoint(GameOverlay.Graphics.Primitives.Point)">
+            <summary>
+                Adds the point.
+            </summary>
+            <param name="point">The point.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.AddRectangle(GameOverlay.Graphics.Primitives.Rectangle,System.Boolean)">
+            <summary>
+                Adds the rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="fill">if set to <c>true</c> [fill].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.AddCurve(GameOverlay.Graphics.Primitives.Point,System.Single,System.Single)">
+            <summary>
+            Adds the curve.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="radius">The radius.</param>
+            <param name="rotationAngle">The rotation angle.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.AddCurve(GameOverlay.Graphics.Primitives.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Adds the curve.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="radius_x">The radius x.</param>
+            <param name="radius_y">The radius y.</param>
+            <param name="rotationAngle">The rotation angle.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Draw(System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the specified stroke.
+            </summary>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.DrawDashed(System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed.
+            </summary>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Fill(GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the specified brush.
+            </summary>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Close">
+            <summary>
+                Closes this instance.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.op_Implicit(GameOverlay.Graphics.Primitives.Geometry)~SharpDX.Direct2D1.Geometry">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.Geometry" /> to <see cref="T:SharpDX.Direct2D1.PathGeometry" />.
+            </summary>
+            <param name="geometry">The geometry.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Geometry.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Line">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Line.Start">
+            <summary>
+                The start
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Line.End">
+            <summary>
+                The end
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Line.#ctor(GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.Primitives.Point)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Line" /> struct.
+            </summary>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Line.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Line" /> struct.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Line.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Line" /> struct.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Line.Draw(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Draws the specified device.
+            </summary>
+            <param name="device">The device.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Line.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Point">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Point.X">
+            <summary>
+                The x
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Point.Y">
+            <summary>
+                The y
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Point.#ctor(System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Point" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Point" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Point.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Point.op_Implicit(GameOverlay.Graphics.Primitives.Point)~SharpDX.Mathematics.Interop.RawVector2">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.Point" /> to <see cref="T:SharpDX.Mathematics.Interop.RawVector2" />.
+            </summary>
+            <param name="point">The point.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Point.op_Implicit(SharpDX.Mathematics.Interop.RawVector2)~GameOverlay.Graphics.Primitives.Point">
+            <summary>
+            Performs an implicit conversion from <see cref="T:SharpDX.Mathematics.Interop.RawVector2"/> to <see cref="T:GameOverlay.Graphics.Primitives.Point"/>.
+            </summary>
+            <param name="vector">The vector.</param>
+            <returns>
+            The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Rectangle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Rectangle.Left">
+            <summary>
+                The left
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Rectangle.Top">
+            <summary>
+                The top
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Rectangle.Right">
+            <summary>
+                The right
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Rectangle.Bottom">
+            <summary>
+                The bottom
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Rectangle" /> class.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Rectangle" /> class.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.Create(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Creates the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.Create(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Creates the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Rectangle.op_Implicit(GameOverlay.Graphics.Primitives.Rectangle)~SharpDX.Mathematics.Interop.RawRectangleF">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.Rectangle" /> to
+                <see cref="T:SharpDX.Mathematics.Interop.RawRectangleF" />.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.RoundedRectangle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.RoundedRectangle.Rectangle">
+            <summary>
+                The rectangle
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.RoundedRectangle.RadiusX">
+            <summary>
+                The radius x
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.RoundedRectangle.RadiusY">
+            <summary>
+                The radius y
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.#ctor(GameOverlay.Graphics.Primitives.Rectangle,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.RoundedRectangle" /> struct.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.#ctor(GameOverlay.Graphics.Primitives.Rectangle,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.RoundedRectangle" /> struct.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="radius_x">The radius x.</param>
+            <param name="radius_y">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.RoundedRectangle" /> struct.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="radius">The radius.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.RoundedRectangle" /> struct.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="radius_x">The radius x.</param>
+            <param name="radius_y">The radius y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Creates the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="radius">The radius.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Creates the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.RoundedRectangle.op_Implicit(GameOverlay.Graphics.Primitives.RoundedRectangle)~SharpDX.Direct2D1.RoundedRectangle">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.Primitives.RoundedRectangle" /> to
+                <see cref="T:SharpDX.Direct2D1.RoundedRectangle" />.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Text">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Text.Content">
+            <summary>
+                The content
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Text.Font">
+            <summary>
+                The font
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Text.Draw(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Draws the specified device.
+            </summary>
+            <param name="device">The device.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Text.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.Primitives.Triangle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Triangle.A">
+            <summary>
+                a
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Triangle.B">
+            <summary>
+                The b
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.Primitives.Triangle.C">
+            <summary>
+                The c
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Triangle.#ctor(GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.Primitives.Point)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Triangle" /> struct.
+            </summary>
+            <param name="a">a.</param>
+            <param name="b">The b.</param>
+            <param name="c">The c.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Triangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Triangle" /> struct.
+            </summary>
+            <param name="a_x">a x.</param>
+            <param name="a_y">a y.</param>
+            <param name="b_x">The b x.</param>
+            <param name="b_y">The b y.</param>
+            <param name="c_x">The c x.</param>
+            <param name="c_y">The c y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Triangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.Primitives.Triangle" /> struct.
+            </summary>
+            <param name="a_x">a x.</param>
+            <param name="a_y">a y.</param>
+            <param name="b_X">The b x.</param>
+            <param name="b_y">The b y.</param>
+            <param name="c_x">The c x.</param>
+            <param name="c_y">The c y.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.Primitives.Triangle.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.CrosshairStyle">
+            <summary>
+                Offers different build in styles for crosshairs
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.CrosshairStyle.Dot">
+            <summary>
+                Draws a single dot
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.CrosshairStyle.Plus">
+            <summary>
+                Draws a +
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.CrosshairStyle.Cross">
+            <summary>
+                Draws a cross
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.CrosshairStyle.Gap">
+            <summary>
+                Draws a + with a gap in the middle
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.CrosshairStyle.Diagonal">
+            <summary>
+                Draws diagonal lines
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DImage">
+            <inheritdoc />
+            <summary>
+                Stores a Bitmap compatible with <c>Direct2DRenderer</c>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DImage.SharpDxBitmap">
+            <summary>
+                A <c>SharpDX.Direct2D1.Bitmap</c> object
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.#ctor(SharpDX.Direct2D1.RenderTarget,System.Byte[])">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="device"><c>RenderTarget</c> device</param>
+            <param name="bytes"><c>Bitmap</c> bytes</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.#ctor(SharpDX.Direct2D1.RenderTarget,System.String)">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="device"><c>RenderTarget</c> device</param>
+            <param name="file">Path to an image file</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.#ctor(GameOverlay.Graphics.D2DDevice,System.Byte[])">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DImage" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="bytes">The bytes.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.#ctor(GameOverlay.Graphics.D2DDevice,System.String)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DImage" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="file">The file.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DImage" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.op_Implicit(GameOverlay.Graphics.D2DImage)~SharpDX.Direct2D1.Bitmap">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DImage" /> to <see cref="T:SharpDX.Direct2D1.Bitmap" />.
+            </summary>
+            <param name="bmp">The BMP.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DImage.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DSolidColorBrush">
+            <inheritdoc />
+            <summary>
+                Stores a Brush compatible with <c>Direct2DRenderer</c>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DSolidColorBrush.Brush">
+            <summary>
+                A <c>SolidColorBrush</c> to use with a rendering device
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.#ctor(SharpDX.Direct2D1.RenderTarget)">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="device"><c>RenderTarget</c> device</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.#ctor(SharpDX.Direct2D1.RenderTarget,GameOverlay.Graphics.D2DColor)">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="device"><c>RenderTarget</c> device</param>
+            <param name="color"><c>Direct2DColor</c> compatible color</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.#ctor(GameOverlay.Graphics.D2DDevice)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DSolidColorBrush" /> class.
+            </summary>
+            <param name="device">The device.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.#ctor(GameOverlay.Graphics.D2DDevice,GameOverlay.Graphics.D2DColor)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DSolidColorBrush" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="color">The color.</param>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DSolidColorBrush.Color">
+            <summary>
+                Gets or sets the used color by this brush
+            </summary>
+            <value>
+                <c>Direct2DColor</c>
+            </value>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.GetBrush">
+            <inheritdoc />
+            <summary>
+                Gets the brush.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.SetBrush(SharpDX.Direct2D1.Brush)">
+            <inheritdoc />
+            <summary>
+                Sets the brush.
+            </summary>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DSolidColorBrush" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.op_Implicit(GameOverlay.Graphics.D2DSolidColorBrush)~SharpDX.Direct2D1.SolidColorBrush">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DSolidColorBrush" /> to <see cref="T:SharpDX.Direct2D1.SolidColorBrush" />.
+            </summary>
+            <param name="brush">The brush.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DSolidColorBrush.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DColor">
+            <summary>
+                Represents a ARGB color
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DColor.A">
+            <summary>
+                a
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DColor.R">
+            <summary>
+                The r
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DColor.G">
+            <summary>
+                The g
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DColor.B">
+            <summary>
+                The b
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DColor" /> struct.
+            </summary>
+            <param name="r">The r.</param>
+            <param name="g">The g.</param>
+            <param name="b">The b.</param>
+            <param name="a">a.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DColor" /> struct.
+            </summary>
+            <param name="r">The r.</param>
+            <param name="g">The g.</param>
+            <param name="b">The b.</param>
+            <param name="a">a.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DColor" /> struct.
+            </summary>
+            <param name="r">The r.</param>
+            <param name="g">The g.</param>
+            <param name="b">The b.</param>
+            <param name="a">a.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.op_Implicit(SharpDX.Mathematics.Interop.RawColor4)~GameOverlay.Graphics.D2DColor">
+            <summary>
+                Performs an implicit conversion from <see cref="T:SharpDX.Mathematics.Interop.RawColor4" /> to <see cref="T:GameOverlay.Graphics.D2DColor" />.
+            </summary>
+            <param name="color">The color.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.op_Implicit(GameOverlay.Graphics.D2DColor)~SharpDX.Mathematics.Interop.RawColor4">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DColor" /> to <see cref="T:SharpDX.Mathematics.Interop.RawColor4" />.
+            </summary>
+            <param name="color">The color.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DColor.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DFont">
+            <inheritdoc />
+            <summary>
+                Stores a <c>Direct2DRenderer</c> compatible font
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DFont.Font">
+            <summary>
+                The font
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.#ctor(SharpDX.DirectWrite.TextFormat)">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="font">The font.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.#ctor(SharpDX.DirectWrite.Factory,System.String,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+                Internal use only
+            </summary>
+            <param name="factory">The factory.</param>
+            <param name="fontFamilyName">Name of the font family.</param>
+            <param name="size">The size.</param>
+            <param name="bold">if set to <c>true</c> [bold].</param>
+            <param name="italic">if set to <c>true</c> [italic].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.#ctor(SharpDX.DirectWrite.Factory,GameOverlay.Graphics.FontOptions)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DFont" /> class.
+            </summary>
+            <param name="factory">The factory.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.#ctor(GameOverlay.Graphics.D2DDevice,System.String,System.Single,System.Boolean,System.Boolean)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DFont" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="fontFamilyName">Name of the font family.</param>
+            <param name="size">The size.</param>
+            <param name="bold">if set to <c>true</c> [bold].</param>
+            <param name="italic">if set to <c>true</c> [italic].</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.#ctor(GameOverlay.Graphics.D2DDevice,GameOverlay.Graphics.FontOptions)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DFont" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DFont.Bold">
+            <summary>
+                Gets or sets a value indicating whether this <see cref="T:GameOverlay.Graphics.D2DFont" /> is bold.
+            </summary>
+            <value><c>true</c> if bold; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DFont.FontFamilyName">
+            <summary>
+                Gets or sets the name of the font family.
+            </summary>
+            <value>The name of the font family.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DFont.FontSize">
+            <summary>
+                Gets or sets the size of the font.
+            </summary>
+            <value>The size of the font.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DFont.Italic">
+            <summary>
+                Gets or sets a value indicating whether this <see cref="T:GameOverlay.Graphics.D2DFont" /> is italic.
+            </summary>
+            <value><c>true</c> if italic; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DFont.WordWrapping">
+            <summary>
+                Gets a value indicating whether [word wrapping].
+            </summary>
+            <value><c>true</c> if [word wrapping]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DFont" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.op_Implicit(GameOverlay.Graphics.D2DFont)~SharpDX.DirectWrite.TextFormat">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DFont" /> to <see cref="T:SharpDX.DirectWrite.TextFormat" />.
+            </summary>
+            <param name="font">The font.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DFont.Dispose">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DDevice">
+            <inheritdoc />
+            <summary>
+                Represents a drawing device of a window
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.IsInitialized">
+            <summary>
+                Gets a value indicating whether this instance is initialized.
+            </summary>
+            <value>
+                <c>true</c> if this instance is initialized; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.IsDrawing">
+            <summary>
+                Gets a value indicating whether this instance is drawing.
+            </summary>
+            <value>
+                <c>true</c> if this instance is drawing; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.FramesPerSecond">
+            <summary>
+                Gets the FramesPerSecond
+            </summary>
+            <value>The FramesPerSecond</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.Height">
+            <summary>
+                Gets the renderers height
+            </summary>
+            <value>The height</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.MeasureFps">
+            <summary>
+                Gets or sets a value indicating whether [measure FramesPerSecond].
+            </summary>
+            <value><c>true</c> if [measure FramesPerSecond]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.RenderTargetHwnd">
+            <summary>
+                Gets the render target HWND.
+            </summary>
+            <value>The render target HWND.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.VSync">
+            <summary>
+                Gets a value indicating whether [vertical synchronize].
+            </summary>
+            <value><c>true</c> if [vertical synchronize]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DDevice.Width">
+            <summary>
+                Gets the renderers width
+            </summary>
+            <value>The width</value>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor">
+            <summary>
+                Prevents a default instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class from being created.
+            </summary>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor(System.IntPtr)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <exception cref="T:System.ArgumentException">D2DDevice - hwnd</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor(System.IntPtr,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <param name="vsync">if set to <c>true</c> [vsync].</param>
+            <exception cref="T:System.ArgumentException">D2DDevice - hwnd</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor(System.IntPtr,System.Boolean,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <param name="vsync">if set to <c>true</c> [vsync].</param>
+            <param name="measureFps">if set to <c>true</c> [measure FramesPerSecond].</param>
+            <exception cref="T:System.ArgumentException">D2DDevice - hwnd</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor(System.IntPtr,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <param name="vsync">if set to <c>true</c> [vsync].</param>
+            <param name="measureFps">if set to <c>true</c> [measure FramesPerSecond].</param>
+            <param name="antiAliasing">if set to <c>true</c> [anti aliasing].</param>
+            <exception cref="T:System.ArgumentException">D2DDevice - hwnd</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.#ctor(GameOverlay.Graphics.DeviceOptions)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+            <param name="options">The options.</param>
+            <exception cref="T:System.ArgumentException">D2DDevice - Hwnd</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DDevice" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DestroyInstance">
+            <summary>
+                Destroys the instance.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Can not destroy an unitiliazed " + nameof(D2DDevice) + "!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.SetupInstance(GameOverlay.Graphics.DeviceOptions)">
+            <summary>
+                Setups the instance.
+            </summary>
+            <param name="options">The options.</param>
+            <exception cref="T:System.InvalidOperationException">Destroy this " + nameof(D2DDevice) + " before initializing it again!</exception>
+            <exception cref="T:System.ArgumentNullException">Hwnd</exception>
+            <exception cref="T:System.ArgumentException">The window does not exist (hwnd = 0x" + options.Hwnd.ToString("X") + ")</exception>
+            <exception cref="T:System.Exception">Failed to get the size of the given window (hwnd = 0x" + options.Hwnd.ToString("X") + ")</exception>
+            <exception cref="T:System.NotSupportedException">
+                This computer does not support Direct2D1!" + Environment.NewLine +
+                ex.ToString()
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.BeginScene">
+            <summary>
+                Begins the scene.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.ClearScene">
+            <summary>
+                Clears the scene.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene or UseScene before ClearScene!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.ClearScene(GameOverlay.Graphics.D2DColor)">
+            <summary>
+                Clears the scene.
+            </summary>
+            <param name="color">The color.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene or UseScene before ClearScene!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.ClearScene(GameOverlay.Graphics.D2DSolidColorBrush)">
+            <summary>
+                Clears the scene.
+            </summary>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene or UseScene before ClearScene!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.EndScene">
+            <summary>
+                Ends the scene.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.Resize(System.Int32,System.Int32)">
+            <summary>
+                Resizes the specified width.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.UseScene">
+            <summary>
+                Uses the scene.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateSolidColorBrush(GameOverlay.Graphics.D2DColor)">
+            <summary>
+                Creates the solid color brush.
+            </summary>
+            <param name="color">The color.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateSolidColorBrush(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Creates the solid color brush.
+            </summary>
+            <param name="r">The r.</param>
+            <param name="g">The g.</param>
+            <param name="b">The b.</param>
+            <param name="a">a.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateSolidColorBrush(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Creates the solid color brush.
+            </summary>
+            <param name="r">The r.</param>
+            <param name="g">The g.</param>
+            <param name="b">The b.</param>
+            <param name="a">a.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateFont(System.String,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+                Creates the font.
+            </summary>
+            <param name="fontFamilyName">Name of the font family.</param>
+            <param name="size">The size.</param>
+            <param name="bold">if set to <c>true</c> [bold].</param>
+            <param name="italic">if set to <c>true</c> [italic].</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateFont(GameOverlay.Graphics.FontOptions)">
+            <summary>
+                Creates the font.
+            </summary>
+            <param name="options">The options.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.LoadImage(System.String)">
+            <summary>
+                Loads the image.
+            </summary>
+            <param name="file">The file.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.LoadImage(System.Byte[])">
+            <summary>
+                Loads the image.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">
+                The DirectX device is not initialized
+                or
+                The " + nameof(D2DDevice) + " hasn't finished initialization!
+            </exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawCircle(GameOverlay.Graphics.Primitives.Circle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the circle.
+            </summary>
+            <param name="circle">The circle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawCircle(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the circle.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedCircle(GameOverlay.Graphics.Primitives.Circle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed circle.
+            </summary>
+            <param name="circle">The circle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedCircle(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed circle.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillCircle(GameOverlay.Graphics.Primitives.Circle,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the circle.
+            </summary>
+            <param name="circle">The circle.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillCircle(System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the circle.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawEllipse(GameOverlay.Graphics.Primitives.Ellipse,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the ellipse.
+            </summary>
+            <param name="ellipse">The ellipse.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawEllipse(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the ellipse.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedEllipse(GameOverlay.Graphics.Primitives.Ellipse,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed ellipse.
+            </summary>
+            <param name="ellipse">The ellipse.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedEllipse(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed ellipse.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillEllipse(GameOverlay.Graphics.Primitives.Ellipse,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the ellipse.
+            </summary>
+            <param name="ellipse">The ellipse.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillEllipse(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the ellipse.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawLine(GameOverlay.Graphics.Primitives.Line,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the line.
+            </summary>
+            <param name="line">The line.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawLine(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the line.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedLine(GameOverlay.Graphics.Primitives.Line,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed line.
+            </summary>
+            <param name="line">The line.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedLine(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed line.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRectangle(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedRectangle(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillRectangle(GameOverlay.Graphics.Primitives.Rectangle,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillRectangle(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRoundedRectangle(GameOverlay.Graphics.Primitives.RoundedRectangle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rounded rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRoundedRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedRoundedRectangle(GameOverlay.Graphics.Primitives.RoundedRectangle,GameOverlay.Graphics.ID2DBrush,System.Single)">
+            <summary>
+                Draws the dashed rounded rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="brush">The brush.</param>
+            <param name="stroke">The stroke.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedRoundedRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillRoundedRectangle(GameOverlay.Graphics.Primitives.RoundedRectangle,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the rounded rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillRoundedRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the rounded rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="radiusX">The radius x.</param>
+            <param name="radiusY">The radius y.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTriangle(GameOverlay.Graphics.Primitives.Triangle,GameOverlay.Graphics.ID2DBrush,System.Single)">
+            <summary>
+                Draws the triangle.
+            </summary>
+            <param name="triangle">The triangle.</param>
+            <param name="brush">The brush.</param>
+            <param name="stroke">The stroke.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTriangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,System.Single)">
+            <summary>
+                Draws the triangle.
+            </summary>
+            <param name="aX">a x.</param>
+            <param name="aY">a y.</param>
+            <param name="bX">The b x.</param>
+            <param name="bY">The b y.</param>
+            <param name="cX">The c x.</param>
+            <param name="cY">The c y.</param>
+            <param name="brush">The brush.</param>
+            <param name="stroke">The stroke.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedTriangle(GameOverlay.Graphics.Primitives.Triangle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed triangle.
+            </summary>
+            <param name="triangle">The triangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedTriangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed triangle.
+            </summary>
+            <param name="aX">a x.</param>
+            <param name="aY">a y.</param>
+            <param name="bX">The b x.</param>
+            <param name="bY">The b y.</param>
+            <param name="cX">The c x.</param>
+            <param name="cY">The c y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillTriangle(GameOverlay.Graphics.Primitives.Triangle,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the triangle.
+            </summary>
+            <param name="triangle">The triangle.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillTriangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the triangle.
+            </summary>
+            <param name="aX">a x.</param>
+            <param name="aY">a y.</param>
+            <param name="bX">The b x.</param>
+            <param name="bY">The b y.</param>
+            <param name="cX">The c x.</param>
+            <param name="cY">The c y.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineLine(GameOverlay.Graphics.Primitives.Line,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the line.
+            </summary>
+            <param name="line">The line.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineLine(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the line.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineCircle(GameOverlay.Graphics.Primitives.Circle,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the circle.
+            </summary>
+            <param name="circle">The circle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineCircle(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the circle.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineRectangle(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineFillCircle(GameOverlay.Graphics.Primitives.Circle,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the fill circle.
+            </summary>
+            <param name="circle">The circle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineFillCircle(System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the fill circle.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="radius">The radius.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineFillRectangle(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the fill rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.OutlineFillRectangle(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Outlines the fill rectangle.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <param name="outline">The outline.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBarH(GameOverlay.Graphics.Primitives.Rectangle,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the bar h.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="percentage">The percentage.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBarH(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the bar h.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="percentage">The percentage.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBarV(GameOverlay.Graphics.Primitives.Rectangle,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the bar v.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="percentage">The percentage.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBarV(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the bar v.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="percentage">The percentage.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawCrosshair(GameOverlay.Graphics.CrosshairStyle,GameOverlay.Graphics.Primitives.Point,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the crosshair.
+            </summary>
+            <param name="style">The style.</param>
+            <param name="location">The location.</param>
+            <param name="size">The size.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawCrosshair(GameOverlay.Graphics.CrosshairStyle,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the crosshair.
+            </summary>
+            <param name="style">The style.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="size">The size.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawArrowLine(GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.Primitives.Point,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the arrow line.
+            </summary>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <param name="size">The size.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawArrowLine(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the arrow line.
+            </summary>
+            <param name="startX">The start x.</param>
+            <param name="startY">The start y.</param>
+            <param name="endX">The end x.</param>
+            <param name="endY">The end y.</param>
+            <param name="size">The size.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBox2D(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the box2 d.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawBox2D(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the box2 d.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="outline">The outline.</param>
+            <param name="fill">The fill.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRectangleEdges(GameOverlay.Graphics.Primitives.Rectangle,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rectangle edges.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawRectangleEdges(System.Single,System.Single,System.Single,System.Single,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the rectangle edges.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="top">The top.</param>
+            <param name="right">The right.</param>
+            <param name="bottom">The bottom.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawText(System.String,GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.D2DFont,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="location">The location.</param>
+            <param name="font">The font.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawText(System.String,System.Single,System.Single,GameOverlay.Graphics.D2DFont,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="font">The font.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawText(System.String,GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.D2DFont,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="location">The location.</param>
+            <param name="font">The font.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawText(System.String,System.Single,System.Single,GameOverlay.Graphics.D2DFont,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="font">The font.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTextWithBackground(System.String,GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.D2DFont,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text with background.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="location">The location.</param>
+            <param name="font">The font.</param>
+            <param name="brush">The brush.</param>
+            <param name="background">The background.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTextWithBackground(System.String,System.Single,System.Single,GameOverlay.Graphics.D2DFont,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text with background.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="font">The font.</param>
+            <param name="brush">The brush.</param>
+            <param name="background">The background.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTextWithBackground(System.String,GameOverlay.Graphics.Primitives.Point,GameOverlay.Graphics.D2DFont,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text with background.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="location">The location.</param>
+            <param name="font">The font.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="brush">The brush.</param>
+            <param name="background">The background.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawTextWithBackground(System.String,System.Single,System.Single,GameOverlay.Graphics.D2DFont,System.Single,GameOverlay.Graphics.ID2DBrush,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the text with background.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="font">The font.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="brush">The brush.</param>
+            <param name="background">The background.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawImage(GameOverlay.Graphics.D2DImage,GameOverlay.Graphics.Primitives.Point,System.Single)">
+            <summary>
+                Draws the image.
+            </summary>
+            <param name="bmp">The BMP.</param>
+            <param name="location">The location.</param>
+            <param name="opacity">The opacity.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawImage(GameOverlay.Graphics.D2DImage,System.Single,System.Single,System.Single)">
+            <summary>
+                Draws the image.
+            </summary>
+            <param name="bmp">The BMP.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="opacity">The opacity.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawImage(GameOverlay.Graphics.D2DImage,GameOverlay.Graphics.Primitives.Rectangle,System.Single)">
+            <summary>
+                Draws the image.
+            </summary>
+            <param name="bmp">The BMP.</param>
+            <param name="rectangle">The rectangle.</param>
+            <param name="opacity">The opacity.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawImage(GameOverlay.Graphics.D2DImage,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Draws the image.
+            </summary>
+            <param name="bmp">The BMP.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="opacity">The opacity.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawShape(GameOverlay.Graphics.IShape)">
+            <summary>
+                Draws the shape.
+            </summary>
+            <param name="shape">The shape.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawShapes(GameOverlay.Graphics.IShapeContainer)">
+            <summary>
+                Draws the shapes.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawGeometry(SharpDX.Direct2D1.Geometry,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the geometry.
+            </summary>
+            <param name="geometry">The geometry.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.DrawDashedGeometry(SharpDX.Direct2D1.Geometry,System.Single,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Draws the dashed geometry.
+            </summary>
+            <param name="geometry">The geometry.</param>
+            <param name="stroke">The stroke.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillGeometry(SharpDX.Direct2D1.Geometry,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the geometry.
+            </summary>
+            <param name="geometry">The geometry.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.FillMesh(SharpDX.Direct2D1.Mesh,GameOverlay.Graphics.ID2DBrush)">
+            <summary>
+                Fills the mesh.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <param name="brush">The brush.</param>
+            <exception cref="T:System.InvalidOperationException">Use BeginScene before drawing any primitives!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.CreateGeometry">
+            <summary>
+                Creates the geometry.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.GetRenderTarget">
+            <summary>
+                Gets the render target.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">The " + nameof(D2DDevice) + " hasn't finished initialization!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.GetFactory">
+            <summary>
+                Gets the factory.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">The " + nameof(D2DDevice) + " hasn't finished initialization!</exception>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.GetFontFactory">
+            <summary>
+                Gets the font factory.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">The " + nameof(D2DDevice) + " hasn't finished initialization!</exception>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DDevice._disposedValue">
+            <summary>
+                The disposed value
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting
+                unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.op_Explicit(GameOverlay.Graphics.D2DDevice)~SharpDX.Direct2D1.RenderTarget">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DDevice" /> to <see cref="T:SharpDX.Direct2D1.RenderTarget" />.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.op_Explicit(GameOverlay.Graphics.D2DDevice)~SharpDX.Direct2D1.Factory">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DDevice" /> to <see cref="T:SharpDX.Direct2D1.Factory" />.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DDevice.op_Explicit(GameOverlay.Graphics.D2DDevice)~SharpDX.DirectWrite.Factory">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DDevice" /> to <see cref="T:SharpDX.DirectWrite.Factory" />.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>
+                The result of the conversion.
+            </returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.D2DScene">
+            <inheritdoc />
+            <summary>
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.#ctor(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Graphics.D2DScene" /> class.
+            </summary>
+            <param name="device">The renderer.</param>
+        </member>
+        <member name="P:GameOverlay.Graphics.D2DScene.Device">
+            <summary>
+                Gets the renderer.
+            </summary>
+            <value>The renderer.</value>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Graphics.D2DScene" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.op_Implicit(GameOverlay.Graphics.D2DScene)~GameOverlay.Graphics.D2DDevice">
+            <summary>
+                Performs an implicit conversion from <see cref="T:GameOverlay.Graphics.D2DScene" /> to <see cref="T:GameOverlay.Graphics.D2DDevice" />.
+            </summary>
+            <param name="scene">The scene.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="F:GameOverlay.Graphics.D2DScene._disposedValue">
+            <summary>
+                The disposed value
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Graphics.D2DScene.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting
+                unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Graphics.FontOptions">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.FontOptions.Bold">
+            <summary>
+                The bold
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.FontOptions.FontFamilyName">
+            <summary>
+                The font family name
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.FontOptions.FontSize">
+            <summary>
+                The font size
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.FontOptions.Italic">
+            <summary>
+                The italic
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.FontOptions.WordWrapping">
+            <summary>
+                The word wrapping
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Graphics.FontOptions.GetStyle">
+            <summary>
+                Gets the style.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GameOverlay.Graphics.DeviceOptions">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.DeviceOptions.AntiAliasing">
+            <summary>
+                The anti aliasing
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.DeviceOptions.Hwnd">
+            <summary>
+                The HWND
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.DeviceOptions.MeasureFps">
+            <summary>
+                The measure FramesPerSecond
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.DeviceOptions.VSync">
+            <summary>
+                The v synchronize
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Graphics.DeviceOptions.MultiThreaded">
+            <summary>
+                The multi threaded
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.LayeredWindowAttribute">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.LayeredWindowAttribute.None">
+            <summary>
+                The none
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.LayeredWindowAttribute.ColorKey">
+            <summary>
+                The color key
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.LayeredWindowAttribute.Alpha">
+            <summary>
+                The alpha
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.LayeredWindowAttribute.Opaque">
+            <summary>
+                The opaque
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.ExtendedWindowStyles">
+            <summary>
+                Extended Window Styles
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.AcceptFiles">
+            <summary>
+                The window accepts drag-drop files.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.AppWindow">
+            <summary>
+                Forces a top-level window onto the taskbar when the window is visible.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.ClientEdge">
+            <summary>
+                The window has a border with a sunken edge.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.Composited">
+            <summary>
+                Paints all descendants of a window in bottom-to-top painting order using double-buffering. For more information,
+                see Remarks. This cannot be used if the window has a class style of either CS_OWNDC or CS_CLASSDC.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.ContextHelp">
+            <summary>
+                The title bar of the window includes a question mark. When the user clicks the question mark, the cursor changes to
+                a question mark with a pointer. If the user then clicks a child window, the child receives a WM_HELP message. The
+                child window should pass the message to the parent window procedure, which should call the WinHelp function using
+                the HELP_WM_HELP command. The Help application displays a pop-up window that typically contains help for the child
+                window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.ControlParent">
+            <summary>
+                The window itself contains child windows that should take part in dialog box navigation. If this style is
+                specified, the dialog manager recurses into children of this window when performing navigation operations such as
+                handling the TAB key, an arrow key, or a keyboard mnemonic.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.DlgModalFrame">
+            <summary>
+                The window has a double border; the window can, optionally, be created with a title bar by specifying the
+                WS_CAPTION style in the dwStyle parameter.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.Layered">
+            <summary>
+                The window is a layered window. This style cannot be used if the window has a class style of either CS_OWNDC or
+                CS_CLASSDC.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.LayoutRtl">
+            <summary>
+                If the shell language is Hebrew, Arabic, or another language that supports reading order alignment, the horizontal
+                origin of the window is on the right edge. Increasing horizontal values advance to the left.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.Left">
+            <summary>
+                The window has generic left-aligned properties. This is the default.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.LeftScrollbar">
+            <summary>
+                If the shell language is Hebrew, Arabic, or another language that supports reading order alignment, the vertical
+                scroll bar (if present) is to the left of the client area. For other languages, the style is ignored.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.LtrReading">
+            <summary>
+                The window text is displayed using left-to-right reading-order properties. This is the default.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.MdiChild">
+            <summary>
+                The window is a MDI child window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.NoActivate">
+            <summary>
+                A top-level window created with this style does not become the foreground window when the user clicks it. The
+                system does not bring this window to the foreground when the user minimizes or closes the foreground window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.NoInheritLayout">
+            <summary>
+                The window does not pass its window layout to its child windows.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.NoParentNotify">
+            <summary>
+                The child window created with this style does not send the WM_PARENTNOTIFY message to its parent window when it is
+                created or destroyed.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.NoRedirectionBitmap">
+            <summary>
+                The window does not render to a redirection surface. This is for windows that do not have visible content or that
+                use mechanisms other than surfaces to provide their visual.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.OverlappedWindow">
+            <summary>
+                The window is an overlapped window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.PaletteWindow">
+            <summary>
+                The window is palette window, which is a modeless dialog box that presents an array of commands.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.Right">
+            <summary>
+                The window has generic "right-aligned" properties. This depends on the window class. This style has an effect only
+                if the shell language is Hebrew, Arabic, or another language that supports reading-order alignment; otherwise, the
+                style is ignored.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.RightScrollbar">
+            <summary>
+                The vertical scroll bar (if present) is to the right of the client area. This is the default.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.RtlReading">
+            <summary>
+                If the shell language is Hebrew, Arabic, or another language that supports reading-order alignment, the window text
+                is displayed using right-to-left reading-order properties. For other languages, the style is ignored.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.StaticEdge">
+            <summary>
+                The window has a three-dimensional border style intended to be used for items that do not accept user input.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.ToolWindow">
+            <summary>
+                The window is intended to be used as a floating toolbar. A tool window has a title bar that is shorter than a
+                normal title bar, and the window title is drawn using a smaller font. A tool window does not appear in the taskbar
+                or in the dialog that appears when the user presses ALT+TAB. If a tool window has a system menu, its icon is not
+                displayed on the title bar. However, you can display the system menu by right-clicking or by typing ALT+SPACE.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.TopMost">
+            <summary>
+                The window should be placed above all non-topmost windows and should stay above them, even when the window is
+                deactivated. To add or remove this style, use the SetWindowPos function.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.Transparent">
+            <summary>
+                The window should not be painted until siblings beneath the window (that were created by the same thread) have been
+                painted. The window appears transparent because the bits of underlying sibling windows have already been painted.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.ExtendedWindowStyles.WindowEdge">
+            <summary>
+                The window has a border with a raised edge.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.NativeMargin">
+            <summary>
+                <c>MARGIN</c> struct used with DesktopWindowManager
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.Message">
+            <summary>
+                Contains a WindowsMessage
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.NativePoint">
+            <summary>
+                X and Y desktop coordinates
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.NativeRect">
+            <summary>
+                Contains Desktop Coordinates
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.NativeRect.Left">
+            <summary>
+                The left
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.NativeRect.Top">
+            <summary>
+                The top
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.NativeRect.Right">
+            <summary>
+                The right
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.NativeRect.Bottom">
+            <summary>
+                The bottom
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.WindowsMessage">
+            <summary>
+                All WindowsMessages
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.WindowClassEx">
+            <summary>
+                Stores information for window creation
+            </summary>
+        </member>
+        <member name="T:GameOverlay.PInvoke.Types.WindowStyles">
+            <summary>
+                Window Styles
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Border">
+            <summary>
+                The window has a thin-line border.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Caption">
+            <summary>
+                The window has a title bar (includes the Border style).
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Child">
+            <summary>
+                The window is a child window. A window with this style cannot have a menu bar. This style cannot be used with the
+                Popup style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.ChildWindow">
+            <summary>
+                Same as the Child style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.ClipChildren">
+            <summary>
+                Excludes the area occupied by child windows when drawing occurs within the parent window. This style is used when
+                creating the parent window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.ClipSiblings">
+            <summary>
+                Clips child windows relative to each other; that is, when a particular child window receives a WM_PAINT message,
+                the ClipSiblings style clips all other overlapping child windows out of the region of the child window to be
+                updated. If ClipSiblings is not specified and child windows overlap, it is possible, when drawing within the client
+                area of a child window, to draw within the client area of a neighboring child window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Disabled">
+            <summary>
+                The window is initially disabled. A disabled window cannot receive input from the user. To change this after a
+                window has been created, use the EnableWindow function.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.DlgFrame">
+            <summary>
+                The window has a border of a style typically used with dialog boxes. A window with this style cannot have a title
+                bar.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Group">
+            <summary>
+                The window is the first control of a group of controls. The group consists of this first control and all controls
+                defined after it, up to the next control with the Group style. The first control in each group usually has the
+                Tabstop style so that the user can move from group to group. The user can subsequently change the keyboard focus
+                from one control in the group to the next control in the group by using the direction keys.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.HScroll">
+            <summary>
+                The window has a horizontal scroll bar.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Iconic">
+            <summary>
+                The window is initially minimized. Same as the Minimize style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Maximize">
+            <summary>
+                The window is initially maximized.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.MaximizeBox">
+            <summary>
+                The window has a maximize button. Cannot be combined with the WS_EX_CONTEXTHELP style. The SysMenu style must also
+                be specified.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Minimize">
+            <summary>
+                The window is initially minimized. Same as the Iconic style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.MinimizeBox">
+            <summary>
+                The window has a minimize button. Cannot be combined with the WS_EX_CONTEXTHELP style. The SysMenu style must also
+                be specified.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Overlapped">
+            <summary>
+                The window is an overlapped window. An overlapped window has a title bar and a border. Same as the WS_TILED style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.OverlappedWindow">
+            <summary>
+                The window is an overlapped window. Same as the TiledWindow style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Popup">
+            <summary>
+                The windows is a pop-up window. This style cannot be used with the Child style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.PopupWindow">
+            <summary>
+                The window is a pop-up window. The Caption and PopupWindow styles must be combined to make the window menu visible.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Sizebox">
+            <summary>
+                he window has a sizing border. Same as the ThickFrame style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.SysMenu">
+            <summary>
+                The window has a window menu on its title bar. The Caption style must also be specified.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Tabstop">
+            <summary>
+                The window is a control that can receive the keyboard focus when the user presses the TAB key. Pressing the TAB key
+                changes the keyboard focus to the next control with the Tabstop style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.ThickFrame">
+            <summary>
+                The window has a sizing border. Same as the Sizebox style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Tiled">
+            <summary>
+                The window is an overlapped window. An overlapped window has a title bar and a border. Same as the Overlapped
+                style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.TiledWindow">
+            <summary>
+                The window is an overlapped window. Same as the OverlappedWindow style.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.Visible">
+            <summary>
+                The window is initially visible.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.PInvoke.Types.WindowStyles.VScroll">
+            <summary>
+                The window has a vertical scroll bar.
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Utilities.WindowHelpers">
+            <summary>
+                Useful Methods
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GenerateRandomString(System.Int32,System.Int32)">
+            <summary>
+                Generates a random string
+            </summary>
+            <param name="minlen">Minimum Length</param>
+            <param name="maxlen">Maximum Length</param>
+            <returns>A Random <c>string</c></returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetExecutableName">
+            <summary>
+                Gets the name of the executable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetLegitWindowName">
+            <summary>
+                Returns a legit window name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetWindowClientSize(System.IntPtr)">
+            <summary>
+            Gets the size of the window client.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetForegroundWindow">
+            <summary>
+                Retrieves a handle to the foreground window (the window with which the user is currently working). The system assigns a slightly higher priority to the thread that creates the foreground window than it does to other threads.
+            </summary>
+            <returns>The return value is a handle to the foreground window. The foreground window can be NULL in certain circumstances, such as when a window is losing activation.</returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetRealWindowRectInternal(System.IntPtr,GameOverlay.PInvoke.Types.NativeRect@)">
+            <summary>
+                Gets the real window nativeRect.
+            </summary>
+            <param name="hwnd">Window Handle</param>
+            <param name="nativeRect">Real window bounds</param>
+            <returns>Non-zero on success</returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.WindowHelpers.GetWindowClientRectInternal(System.IntPtr,GameOverlay.PInvoke.Types.NativeRect@)">
+            <summary>
+                Gets the window client nativeRect.
+            </summary>
+            <param name="hwnd">The HWND.</param>
+            <param name="nativeRect">The nativeRect.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GameOverlay.Utilities.FrameTimer">
+            <inheritdoc />
+            <summary>
+                Creates a drawing loop and optionally limits fps
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="T:GameOverlay.Utilities.FrameTimer.FrameStageNotifyEventHandler">
+            <summary>
+            </summary>
+            <param name="timer">The timer.</param>
+            <param name="device">The device.</param>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.#ctor(System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+            <param name="framesPerSecond">The frames per second.</param>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.#ctor(System.Int32,GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+            <param name="framesPerSecond">The frames per second.</param>
+            <param name="device">The device.</param>
+            <exception cref="T:System.ArgumentNullException">device</exception>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.#ctor(GameOverlay.Graphics.D2DDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <exception cref="T:System.ArgumentNullException">device</exception>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.#ctor(GameOverlay.Graphics.D2DDevice,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="framesPerSecond">The frames per second.</param>
+            <exception cref="T:System.ArgumentNullException">device</exception>
+        </member>
+        <member name="P:GameOverlay.Utilities.FrameTimer.Device">
+            <summary>
+                Gets or sets the device.
+            </summary>
+            <value>
+                The device.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Utilities.FrameTimer.FramesPerSecond">
+            <summary>
+                Gets or sets the frames per second.
+            </summary>
+            <value>
+                The frames per second.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Utilities.FrameTimer.IsPaused">
+            <summary>
+                Gets or sets a value indicating whether this instance is paused.
+            </summary>
+            <value>
+                <c>true</c> if this instance is paused; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:GameOverlay.Utilities.FrameTimer.OnFrameStarting">
+            <summary>
+                Occurs when [frame starting].
+            </summary>
+        </member>
+        <member name="E:GameOverlay.Utilities.FrameTimer.OnFrame">
+            <summary>
+                Occurs when [on frame].
+            </summary>
+        </member>
+        <member name="E:GameOverlay.Utilities.FrameTimer.OnFrameEnding">
+            <summary>
+                Occurs when [frame ending].
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Utilities.FrameTimer" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Start">
+            <summary>
+                Starts this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Stop">
+            <summary>
+                Stops this instance.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Resume">
+            <summary>
+                Resumes this instance.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Pause">
+            <summary>
+                Pauses this instance.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Utilities.FrameTimer.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:GameOverlay.Library">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Library.Author">
+            <summary>
+                Returns the Author of this Library
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Library.Name">
+            <summary>
+                Returns the Library Name
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Library.ProjectUrl">
+            <summary>
+                Returns the URL of the Github Repository
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Library.Version">
+            <summary>
+                Returns the <c>AssemblyVersion</c> of this Library
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Windows.StickyOverlayWindow">
+            <inheritdoc />
+            <summary>
+            </summary>
+            <seealso cref="T:GameOverlay.Windows.OverlayWindow" />
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.#ctor(System.IntPtr)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Windows.StickyOverlayWindow" /> class.
+            </summary>
+            <param name="parentWindowHandle">The parent window handle.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.#ctor(System.IntPtr,GameOverlay.Windows.OverlayOptions)">
+            <inheritdoc />
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Windows.StickyOverlayWindow" /> class.
+            </summary>
+            <param name="parentWindowHandle">The parent window handle.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:GameOverlay.Windows.StickyOverlayWindow.ParentWindowHandle">
+            <summary>
+                Gets the parent window handle.
+            </summary>
+            <value>The parent window handle.</value>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.Finalize">
+            <inheritdoc />
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Windows.StickyOverlayWindow" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.Install">
+            <summary>
+                Installs the sticky overlay.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.UnInstall">
+            <summary>
+                Uns the install.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyOverlayWindow.Dispose(System.Boolean)">
+            <inheritdoc />
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="T:GameOverlay.Windows.OverlayOptions">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.BypassTopmost">
+            <summary>
+                The bypass topmost
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.Height">
+            <summary>
+                The height
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.Width">
+            <summary>
+                The width
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.WindowTitle">
+            <summary>
+                The window title
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.ClassName">
+            <summary>
+                The windows class name
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.MenuName">
+            <summary>
+                The windows menu name
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.X">
+            <summary>
+                The x
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayOptions.Y">
+            <summary>
+                The y
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Windows.OverlayWindow">
+            <inheritdoc />
+            <summary>
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="T:GameOverlay.Windows.OverlayWindow.WindowBoundsChanged">
+            <summary>
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.#ctor(System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Windows.OverlayWindow" /> class.
+            </summary>
+            <param name="bypassTopmost">if set to <c>true</c> [bypass topmost].</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Windows.OverlayWindow" /> class.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="bypassTopmost">if set to <c>true</c> [bypass topmost].</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.#ctor(GameOverlay.Windows.OverlayOptions)">
+            <summary>
+                Initializes a new instance of the <see cref="T:GameOverlay.Windows.OverlayWindow" /> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.IsInitialized">
+            <summary>
+                Gets a value indicating whether this instance is initialized.
+            </summary>
+            <value>
+                <c>true</c> if this instance is initialized; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.BypassTopmost">
+            <summary>
+                Gets a value indicating whether [bypass topmost].
+            </summary>
+            <value><c>true</c> if [bypass topmost]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.Height">
+            <summary>
+                Gets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.IsVisible">
+            <summary>
+                Gets a value indicating whether this instance is visible.
+            </summary>
+            <value><c>true</c> if this instance is visible; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.Topmost">
+            <summary>
+                Gets a value indicating whether this <see cref="T:GameOverlay.Windows.OverlayWindow" /> is topmost.
+            </summary>
+            <value><c>true</c> if topmost; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.Width">
+            <summary>
+                Gets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.WindowMenuName">
+            <summary>
+                Gets the window menu name
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.WindowClassName">
+            <summary>
+                Gets the name of the window class.
+            </summary>
+            <value>The name of the window class.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.WindowHandle">
+            <summary>
+                Gets the window handle.
+            </summary>
+            <value>The window handle.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.WindowTitle">
+            <summary>
+                Gets the window title.
+            </summary>
+            <value>The window title.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.X">
+            <summary>
+                Gets the x.
+            </summary>
+            <value>The x.</value>
+        </member>
+        <member name="P:GameOverlay.Windows.OverlayWindow.Y">
+            <summary>
+                Gets the y.
+            </summary>
+            <value>The y.</value>
+        </member>
+        <member name="E:GameOverlay.Windows.OverlayWindow.OnWindowBoundsChanged">
+            <summary>
+                Occurs when [on window bounds changed]. Assign after device creation
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:GameOverlay.Windows.OverlayWindow" /> class.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.SetupInstance(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Setups the instance.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.HideWindow">
+            <summary>
+                Hides the window.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.MoveWindow(System.Int32,System.Int32)">
+            <summary>
+                Moves the window.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.ResizeWindow(System.Int32,System.Int32)">
+            <summary>
+                Resizes the window.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.SetWindowBounds(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Sets the window bounds.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.ShowWindow">
+            <summary>
+                Shows the window.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.ExtendFrameIntoClientArea">
+            <summary>
+                Extends the frame into client area.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.OverlayWindow._disposedValue">
+            <summary>
+                The disposed value
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.Dispose">
+            <inheritdoc />
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting
+                unmanaged resources.
+            </summary>
+        </member>
+    </members>
+</doc>

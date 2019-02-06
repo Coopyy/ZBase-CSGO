@@ -31,16 +31,15 @@
             this.DiscordBTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BunnyhopCheck = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.GithubBTN = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.OverlayBtn = new System.Windows.Forms.Button();
+            this.ESPCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // DiscordBTN
             // 
-            this.DiscordBTN.Location = new System.Drawing.Point(12, 58);
+            this.DiscordBTN.Location = new System.Drawing.Point(12, 35);
             this.DiscordBTN.Name = "DiscordBTN";
             this.DiscordBTN.Size = new System.Drawing.Size(166, 23);
             this.DiscordBTN.TabIndex = 0;
@@ -60,25 +59,16 @@
             // BunnyhopCheck
             // 
             this.BunnyhopCheck.AutoSize = true;
-            this.BunnyhopCheck.Location = new System.Drawing.Point(12, 184);
+            this.BunnyhopCheck.Location = new System.Drawing.Point(12, 129);
             this.BunnyhopCheck.Name = "BunnyhopCheck";
             this.BunnyhopCheck.Size = new System.Drawing.Size(194, 17);
             this.BunnyhopCheck.TabIndex = 2;
             this.BunnyhopCheck.Text = "Bunny Hop (Space) - Sample Cheat";
             this.BunnyhopCheck.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(360, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "feel free to check out the github page on how to add themes to your menu!";
-            // 
             // GithubBTN
             // 
-            this.GithubBTN.Location = new System.Drawing.Point(206, 58);
+            this.GithubBTN.Location = new System.Drawing.Point(203, 35);
             this.GithubBTN.Name = "GithubBTN";
             this.GithubBTN.Size = new System.Drawing.Size(166, 23);
             this.GithubBTN.TabIndex = 4;
@@ -88,7 +78,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(9, 105);
+            this.label3.Location = new System.Drawing.Point(9, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(360, 39);
             this.label3.TabIndex = 5;
@@ -97,33 +87,32 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(9, 131);
+            this.label4.Location = new System.Drawing.Point(9, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(360, 23);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Have Fun!";
+            this.label4.Text = "Have Fun! - Coopyy";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // OverlayBtn
+            // ESPCheck
             // 
-            this.OverlayBtn.Location = new System.Drawing.Point(276, 180);
-            this.OverlayBtn.Name = "OverlayBtn";
-            this.OverlayBtn.Size = new System.Drawing.Size(93, 23);
-            this.OverlayBtn.TabIndex = 7;
-            this.OverlayBtn.Text = "Show Overlay";
-            this.OverlayBtn.UseVisualStyleBackColor = true;
-            this.OverlayBtn.Click += new System.EventHandler(this.OverlayBtn_Click);
+            this.ESPCheck.AutoSize = true;
+            this.ESPCheck.Location = new System.Drawing.Point(12, 152);
+            this.ESPCheck.Name = "ESPCheck";
+            this.ESPCheck.Size = new System.Drawing.Size(86, 17);
+            this.ESPCheck.TabIndex = 7;
+            this.ESPCheck.Text = "Overlay ESP";
+            this.ESPCheck.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 213);
-            this.Controls.Add(this.OverlayBtn);
+            this.ClientSize = new System.Drawing.Size(384, 187);
+            this.Controls.Add(this.ESPCheck);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GithubBTN);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.BunnyhopCheck);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DiscordBTN);
@@ -140,11 +129,10 @@
         private System.Windows.Forms.Button DiscordBTN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox BunnyhopCheck;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button GithubBTN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button OverlayBtn;
+        private System.Windows.Forms.CheckBox ESPCheck;
     }
 }
 

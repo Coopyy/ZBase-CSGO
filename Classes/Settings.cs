@@ -9,5 +9,6 @@ namespace ZBase.Classes
     public class Settings
     {
         public bool BunnyhopEnabled;
+        public bool ESP;
     }
 }

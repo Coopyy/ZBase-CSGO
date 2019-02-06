@@ -14,7 +14,6 @@ namespace ZBase.Utilities
     public class Tools
     {
         public static IntPtr handle = Memory.FindWindow(null, "Counter-Strike: Global Offensive");
-        public static int MaxFOV = 360;
         public static void InitializeGlobals()
         {
             while (true)
@@ -158,7 +157,7 @@ namespace ZBase.Utilities
             return false;
         }
 
-        public static Entity GetFovPlayer()
+        public static Entity GetFovPlayer(int FOV)
         {
             Entity e = null;
             foreach (Entity Player in Globals.EntityList)
@@ -169,11 +168,11 @@ namespace ZBase.Utilities
                     if (!IsNullVector2(vector))
                     {
                         float dist = Vector2.Distance(Main.MidScreen, vector);
-                        if (dist < MaxFOV && e == null)
+                        if (dist < FOV && e == null)
                         {
                             e = Player;
                         }
-                        else if (dist < MaxFOV)
+                        else if (dist < FOV)
                         {
                             Vector2 vector3 = WorldToScreen(e.HeadPosition);
                             Vector2 vector4;
