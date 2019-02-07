@@ -29,11 +29,7 @@ namespace ZBase
                     CheckMenu();
                 }).Start();
 
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    Tools.InitializeGlobals();
-                }).Start();
+                Tools.InitializeGlobals();
 
                 new Thread(() =>
                 {
@@ -61,7 +57,7 @@ namespace ZBase
                 if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
                     Visible = !Visible;
 
-                Thread.Sleep(1); // Greatly reduces cpu usage
+                Thread.Sleep(50); // Greatly reduces cpu usage
             }
         }
 

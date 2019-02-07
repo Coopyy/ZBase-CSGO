@@ -46,7 +46,7 @@ namespace ZBase.Cheats
             {
                 AntiAliasing = true,
                 Hwnd = _window.WindowHandle,
-                MeasureFps = true,
+                MeasureFps = false,
                 MultiThreaded = false,
                 VSync = false
             });

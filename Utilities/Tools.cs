@@ -16,35 +16,49 @@ namespace ZBase.Utilities
         public static IntPtr handle = Memory.FindWindow(null, "Counter-Strike: Global Offensive");
         public static void InitializeGlobals()
         {
-            while (true)
+            new Thread(() =>
             {
-                Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwLocalPlayer));
-                Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwGlowObjectManager);
-                Globals.ClientState = Memory.ReadMemory<int>((int)Memory.Engine + Main.O.signatures.dwClientState);
-                Globals.ViewAngles = Memory.ReadMemory<Vector3>(Globals.ClientState + Main.O.signatures.dwClientState_ViewAngles);
-                for (int i = 0; i < 16; i++)
-                    Globals.ViewMatrix[i] = Memory.ReadMemory<float>((int)Memory.Client + Main.O.signatures.dwViewMatrix + (i * 0x4));
-
-                #region Misc
-                RECT rect;
-                Memory.GetWindowRect(handle, out rect);
-                Main.ScreenSize = RectToSize(rect);
-                Main.MidScreen = new Vector2(Main.ScreenSize.Width / 2, Main.ScreenSize.Height / 2);
-                Main.ScreenRect = rect;
-                #endregion
-
-                // Get Players
-                var oldEntityList = new List<Entity>();
-                oldEntityList.Clear();
-                for (int i = 1; i <= 64; i++)
+                Thread.CurrentThread.IsBackground = true;
+                while (true)
                 {
-                    Entity ent = new Entity(GetEntityBase(i));
-                    if (ent.Valid)
-                        oldEntityList.Add(ent);
+                    Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwLocalPlayer));
+                    Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.Client + Main.O.signatures.dwGlowObjectManager);
+                    Globals.ClientState = Memory.ReadMemory<int>((int)Memory.Engine + Main.O.signatures.dwClientState);
+
+                    #region Misc
+                    RECT rect;
+                    Memory.GetWindowRect(handle, out rect);
+                    Main.ScreenSize = RectToSize(rect);
+                    Main.MidScreen = new Vector2(Main.ScreenSize.Width / 2, Main.ScreenSize.Height / 2);
+                    Main.ScreenRect = rect;
+                    #endregion
+
+                    // Get Players
+                    var oldEntityList = new List<Entity>();
+                    oldEntityList.Clear();
+                    for (int i = 1; i <= 64; i++)
+                    {
+                        Entity ent = new Entity(GetEntityBase(i));
+                        if (ent.Valid)
+                            oldEntityList.Add(ent);
+                    }
+                    Globals.EntityList = oldEntityList;
+                    Thread.Sleep(1000);
                 }
-                Globals.EntityList = oldEntityList;
-                Thread.Sleep(1);
-            }
+            }).Start();
+
+            new Thread(() =>
+            {
+                Thread.CurrentThread.IsBackground = true;
+                while (true)
+                {
+                    Globals.ViewAngles = Memory.ReadMemory<Vector3>(Globals.ClientState + Main.O.signatures.dwClientState_ViewAngles);
+                    for (int i = 0; i < 16; i++)
+                        Globals.ViewMatrix[i] = Memory.ReadMemory<float>((int)Memory.Client + Main.O.signatures.dwViewMatrix + (i * 0x4));
+                    Thread.Sleep(1);
+                }
+            }).Start();
+
         }
 
         public static Vector2 WorldToScreen(Vector3 target)
