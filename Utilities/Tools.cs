@@ -28,6 +28,9 @@ namespace ZBase.Utilities
                     #region Misc
                     RECT rect;
                     Memory.GetWindowRect(handle, out rect);
+                    /* this is for windowed mode, will have checks in the future
+                    rect.top += 26;
+                    rect.left += 2;*/
                     Main.ScreenSize = RectToSize(rect);
                     Main.MidScreen = new Vector2(Main.ScreenSize.Width / 2, Main.ScreenSize.Height / 2);
                     Main.ScreenRect = rect;
@@ -200,6 +203,14 @@ namespace ZBase.Utilities
                 }
             }
             return e;
+        }
+
+        public static bool InScreenPos(float x, float y)
+        {
+            if (x < Main.ScreenSize.Width && x >= 0 && y < Main.ScreenSize.Height && y >= 0)
+                return true;
+            else
+                return false;
         }
 
         public static Size RectToSize(RECT rect)

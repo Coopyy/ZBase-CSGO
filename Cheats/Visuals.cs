@@ -37,10 +37,12 @@ namespace ZBase.Cheats
                 BypassTopmost = false,
                 Height = (int)(Main.ScreenSize.Height),
                 Width = (int)(Main.ScreenSize.Width),
+                X = Main.ScreenRect.left,
+                Y = Main.ScreenRect.top,
                 WindowTitle = "Overlay",
-                X = 0,
-                Y = 0,
+
             });
+
 
             _device = new D2DDevice(new DeviceOptions()
             {
@@ -96,8 +98,7 @@ namespace ZBase.Cheats
             }
             device.ClearScene();
             #endregion
-            DrawTextWithBackground("ZBase", 0, 0, 16, Color.Blue, Color.DimGray);
-
+            DrawTextWithBackground("ZBase", 0, 0, 16, Color.Maroon, Color.DarkGray);
             if (Main.S.ESP)
             {
                 foreach (Entity Player in Globals.EntityList)
@@ -135,28 +136,34 @@ namespace ZBase.Cheats
 
             void DrawText(string text, float x, float y, int size, Color color, bool bold = false, bool italic = false)
             {
-                D2DFont f = _device.CreateFont(new FontOptions()
+                if (Tools.InScreenPos(x, y))
                 {
-                    Bold = bold,
-                    FontFamilyName = "Arial",
-                    FontSize = size,
-                    Italic = italic,
-                    WordWrapping = true
-                });
-                device.DrawText(text, new Point(x, y), f, GetDXColor(color));
+                    D2DFont f = _device.CreateFont(new FontOptions()
+                    {
+                        Bold = bold,
+                        FontFamilyName = "Arial",
+                        FontSize = size,
+                        Italic = italic,
+                        WordWrapping = true
+                    });
+                    device.DrawText(text, new Point(x, y), f, GetDXColor(color));
+                }
             }
 
             void DrawTextWithBackground(string text, float x, float y, int size, Color color, Color backcolor, bool bold = false, bool italic = false)
             {
-                D2DFont f = _device.CreateFont(new FontOptions()
+                if (Tools.InScreenPos(x, y))
                 {
-                    Bold = bold,
-                    FontFamilyName = "Arial",
-                    FontSize = size,
-                    Italic = italic,
-                    WordWrapping = true
-                });
-                device.DrawTextWithBackground(text, new Point(x, y), f, GetDXColor(color), GetDXColor(backcolor));
+                    D2DFont f = _device.CreateFont(new FontOptions()
+                    {
+                        Bold = bold,
+                        FontFamilyName = "Arial",
+                        FontSize = size,
+                        Italic = italic,
+                        WordWrapping = true
+                    });
+                    device.DrawTextWithBackground(text, new Point(x, y), f, GetDXColor(color), GetDXColor(backcolor));
+                }
             }
 
             void DrawLine(float fromx, float fromy, float tox, float toy, Color color, float thiccness = 2.0f)
