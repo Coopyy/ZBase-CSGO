@@ -107,10 +107,26 @@ namespace ZBase.Cheats
                                 else
                                     drawcolor = Color.Red;
 
-                                // draw boxes
-                                DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
+                                #region Box
+                                //DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
                                 //DrawFillOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, Color.FromArgb(50, 198, 198, 198));
+                                DrawBoxEdge(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, 1);
+                                #endregion
+                                #region Health Bar
+                                float Health = Player.Health;
+                                Color HealthColor = Tools.HealthGradient(Tools.HealthToPercent((int)Health));
+                                float x = Player2DPos.X - (BoxWidth / 2) - 8;
+                                float y = Player2DHeadPos.Y;
+                                float w = 4;
+                                float h = BoxHeight;
+                                float HealthHeight = (Health * h) / 100;
+
+                                DrawBox(x, y, w, h, Color.Black, 1);
+                                DrawFilledBox(x + 1, y + 1, 2, HealthHeight - 1, HealthColor);
+                                #endregion
+                                #region Snaplines
                                 DrawLine(Main.MidScreen.X, Main.MidScreen.Y + Main.MidScreen.Y, Player2DPos.X, Player2DPos.Y, drawcolor);
+                                #endregion
                             }
                         }
                     }
@@ -171,7 +187,7 @@ namespace ZBase.Cheats
 
             void DrawBox(float x, float y, float width, float height, Color color, float thiccness = 2.0f)
             {
-                gfx.DrawRectangleEdges(GetBrushColor(color), x, y, x + width, y + height, thiccness);
+                gfx.DrawRectangle(GetBrushColor(color), x, y, x + width, y + height, thiccness);
             }
 
             void DrawOutlineBox(float x, float y, float width, float height, Color color, float thiccness = 2.0f)
