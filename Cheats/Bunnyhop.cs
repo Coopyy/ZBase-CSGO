@@ -13,14 +13,17 @@ namespace ZBase.Cheats
     {
         public static void Run()
         {
-            while (Main.S.BunnyhopEnabled)
+            while (true)
             {
-                if (Tools.HoldingKey(Keys.VK_SPACE)) // while holding space
+                if (Main.S.BunnyhopEnabled) // make sure the cheats enabled in the menu
                 {
-                    // Flags show if you are on the ground or not. 257 is standing on the ground, and 263 is crouching on the ground.
-                    if (G.Engine.LocalPlayer.Flags == 257 || G.Engine.LocalPlayer.Flags == 263)
+                    if (Tools.HoldingKey(Keys.VK_SPACE)) // while holding space
                     {
-                        G.Engine.Jump();
+                        // Flags show if you are on the ground or not. 257 is standing on the ground, and 263 is crouching on the ground.
+                        if (G.Engine.LocalPlayer.Flags == 257 || G.Engine.LocalPlayer.Flags == 263)
+                        {
+                            G.Engine.Jump();
+                        }
                     }
                 }
                 Thread.Sleep(1); // reduce cpu usage again
