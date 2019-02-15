@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZBase.Cheats;
+using ZBase.Classes;
 using ZBase.Utilities;
 
 namespace ZBase
@@ -37,7 +39,13 @@ namespace ZBase
                     Bunnyhop.Run();
                 }).Start();
 
-                Visuals v = new Visuals();
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    Visuals v = new Visuals();
+                    v.Initialize();
+                    v.Run();
+                }).Start();
                 #endregion
             }
         }

@@ -54,7 +54,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Team == Globals.LocalPlayer.Team;
+                return Team == G.Engine.LocalPlayer.Team;
             }
         }
 
@@ -63,6 +63,14 @@ namespace ZBase.Classes
             get
             {
                 return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecOrigin);
+            }
+        }
+
+        public Vector3 EyePosition
+        {
+            get
+            {
+                return Position + Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecViewOffset);
             }
         }
 
@@ -99,7 +107,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Globals.LocalPlayer.EntityBase == EntityBase;
+                return G.Engine.LocalPlayer.EntityBase == EntityBase;
             }
         }
 
@@ -135,7 +143,7 @@ namespace ZBase.Classes
         {
             GlowStruct GlowObj = new GlowStruct();
 
-            GlowObj = Memory.ReadMemory<GlowStruct>(Globals.GlowObjectManager + GlowIndex * 0x38);
+            GlowObj = Memory.ReadMemory<GlowStruct>(G.Engine.GlowObjectManager + GlowIndex * 0x38);
 
             GlowObj.r = (float)color.R / 255;
             GlowObj.g = (float)color.G / 255;
@@ -144,7 +152,7 @@ namespace ZBase.Classes
             GlowObj.m_bRenderWhenOccluded = true;
             GlowObj.m_bRenderWhenUnoccluded = false;
 
-            Memory.WriteMemory<GlowStruct>(Globals.GlowObjectManager + GlowIndex * 0x38, GlowObj);
+            Memory.WriteMemory<GlowStruct>(G.Engine.GlowObjectManager + GlowIndex * 0x38, GlowObj);
         }
 
         public void Cham(Color color)
@@ -347,7 +355,7 @@ namespace ZBase.Classes
         {
             get
             {
-                return Vector3.Distance(Globals.LocalPlayer.Position, Position);
+                return Vector3.Distance(G.Engine.LocalPlayer.Position, Position);
             }
         }
     }

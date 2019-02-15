@@ -33,7 +33,10 @@ namespace ZBase
                         Memory.Client = Module.BaseAddress;
 
                     if ((Module.ModuleName == "engine.dll"))
+                    {
                         Memory.Engine = Module.BaseAddress;
+                        G.Engine = new Engine((int)Module.BaseAddress);
+                    }
                 }
                 return true;
             }
