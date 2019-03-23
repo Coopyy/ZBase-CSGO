@@ -337,11 +337,12 @@ namespace ZBase.Classes
                 return Memory.ReadMemory<int>(EntityBase + Main.O.netvars.m_iShotsFired);
             }
         }
-        public Vector3 Velocity
+        public float Velocity
         {
             get
             {
-                return Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecVelocity);
+                Vector3 vel = Memory.ReadMemory<Vector3>(EntityBase + Main.O.netvars.m_vecVelocity);
+                return (float)Math.Sqrt(vel.X * vel.X + vel.Y * vel.Y);
             }
         }
         public bool Scoped

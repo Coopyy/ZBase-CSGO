@@ -83,24 +83,20 @@ namespace ZBase.Cheats
                 gfx.ClearScene();
                 // start drawings here
 
-                DrawTextWithBackground("ZBase", 0, 0, 18, Color.Maroon, Color.Black);
+                DrawTextWithOutline("ZBase", 10, 5, 25, Color.DeepSkyBlue, Color.Black, true, true);
                 if (Main.S.ESP)
                 {
                     foreach (Entity Player in G.EntityList)
                     {
                         if (Player.EntityBase != G.Engine.LocalPlayer.EntityBase)
                         {
-                            Vector2 Player2DPos = Tools.WorldToScreen(Player.Position);
-                            Vector2 Player2DHeadPos = Tools.WorldToScreen(Player.HeadPosition);
-                            Vector2 Player2DNeckPos = Tools.WorldToScreen(Player.GetBonePosition(7));
+                            Vector2 Player2DPos = Tools.WorldToScreen(new Vector3(Player.Position.X, Player.Position.Y, Player.Position.Z - 5));
+                            Vector2 Player2DHeadPos = Tools.WorldToScreen(new Vector3(Player.HeadPosition.X, Player.HeadPosition.Y, Player.HeadPosition.Z + 10));
                             if (!Tools.IsNullVector2(Player2DPos) && !Tools.IsNullVector2(Player2DHeadPos) && Player.Valid)
                             {
-                                float FromHeadToNeck = (Player2DNeckPos.Y - Player2DHeadPos.Y);
-                                Player2DHeadPos.Y -= FromHeadToNeck * 2.3f;
-                                Player2DPos.Y += FromHeadToNeck;
                                 float BoxHeight = Player2DPos.Y - Player2DHeadPos.Y;
-                                float BoxWidth = (BoxHeight / 2);
-                                //wierd ass calculations for box height, dont judge
+                                float BoxWidth = (BoxHeight / 2) * 1.25f; //little bit wider box
+
                                 Color drawcolor;
                                 if (Player.IsTeammate)
                                     drawcolor = Color.Blue;
@@ -108,9 +104,9 @@ namespace ZBase.Cheats
                                     drawcolor = Color.Red;
 
                                 #region Box
-                                //DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
+                                DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
                                 //DrawFillOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, Color.FromArgb(50, 198, 198, 198));
-                                DrawBoxEdge(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, 1);
+                                //DrawBoxEdge(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, 1);
                                 #endregion
                                 #region Health Bar
                                 float Health = Player.Health;
@@ -131,9 +127,6 @@ namespace ZBase.Cheats
                         }
                     }
                 }
-
-                
-
                 //end drawings
                 gfx.EndScene();
             }
@@ -148,15 +141,22 @@ namespace ZBase.Cheats
             {
                 if (Tools.InScreenPos(x, y))
                 {
-                    gfx.DrawText(_graphics.CreateFont("Arial", 16, bold, italic), GetBrushColor(color), x, y, text);
+                    gfx.DrawText(_graphics.CreateFont("Arial", size, bold, italic), GetBrushColor(color), x, y, text);
                 }
+            }
+
+            void DrawTextWithOutline(string text, float x, float y, int size, Color color, Color outlinecolor, bool bold = true, bool italic = false)
+            {
+                DrawText(text, x-1, y+1, size, outlinecolor, bold, italic);
+                DrawText(text, x+1, y+1, size, outlinecolor, bold, italic);
+                DrawText(text, x, y, size, color, bold, italic);
             }
 
             void DrawTextWithBackground(string text, float x, float y, int size, Color color, Color backcolor, bool bold = false, bool italic = false)
             {
                 if (Tools.InScreenPos(x, y))
                 {
-                    gfx.DrawTextWithBackground(_graphics.CreateFont("Arial", 16, bold, italic), GetBrushColor(color), GetBrushColor(backcolor), x, y, text);
+                    gfx.DrawTextWithBackground(_graphics.CreateFont("Arial", size, bold, italic), GetBrushColor(color), GetBrushColor(backcolor), x, y, text);
                 }
             }
 
