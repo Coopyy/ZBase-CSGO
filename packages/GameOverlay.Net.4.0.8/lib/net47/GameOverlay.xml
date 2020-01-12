@@ -1,0 +1,906 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameOverlay</name>
+    </assembly>
+    <members>
+        <member name="T:GameOverlay.Drawing.Color">
+            <summary>
+            Represents an ARGB (alpha, red, green, blue) Color.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Color.Transparent">
+            <summary>
+            Returns a transparent Color.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Color.Red">
+            <summary>
+            Returns a red Color.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Color.Green">
+            <summary>
+            Returns a green Color.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Color.Blue">
+            <summary>
+            Returns a blue Color.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Color.A">
+            <summary>
+            Gets the alpha component value of this Color.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Color.R">
+            <summary>
+            Gets the red component value of this Color.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Color.G">
+            <summary>
+            Gets the green component value of this Color.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Color.B">
+            <summary>
+            Gets the blue component value of this Color.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Color using the specified components.
+            </summary>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Color using the specified components.
+            </summary>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Initializes a new Color using the specified components.
+            </summary>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Single)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Int32)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Byte)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Color and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(GameOverlay.Drawing.Color)">
+            <summary>
+            Returns a value indicating whether two specified instances of Color represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.ToString">
+            <summary>
+            Converts this Color structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Color.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.ToARGB">
+            <summary>
+            Gets the 32-bit ARGB value of this Color structure.
+            </summary>
+            <returns>The 32-bit ARGB value of this Color.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.FromARGB(System.Int32)">
+            <summary>
+            Creates a Color structure from a 32-bit ARGB value.
+            </summary>
+            <param name="value">A value specifying the 32-bit ARGB value.</param>
+            <returns>The Color structure that this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Implicit(SharpDX.Mathematics.Interop.RawColor4)~GameOverlay.Drawing.Color">
+            <summary>
+            Converts a SharpDX RawColor4 to a Color
+            </summary>
+            <param name="color">A RawColor4</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Implicit(GameOverlay.Drawing.Color)~SharpDX.Mathematics.Interop.RawColor4">
+            <summary>
+            Converts a Color to a SharpDX RawColor4
+            </summary>
+            <param name="color"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Equality(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Inequality(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Returns a value indicating whether two specified instances of Color represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.CrosshairStyle">
+            <summary>
+                Offers different built-in styles for crosshairs
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.CrosshairStyle.Dot">
+            <summary>
+                Draws a single dot
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.CrosshairStyle.Plus">
+            <summary>
+                Draws a +
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.CrosshairStyle.Cross">
+            <summary>
+                Draws a cross
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.CrosshairStyle.Gap">
+            <summary>
+                Draws a + with a gap in the middle
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.CrosshairStyle.Diagonal">
+            <summary>
+                Draws diagonal lines
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Drawing.Font">
+            <summary>
+            Defines a particular format for text, including font family name, size, and style attributes.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Font.TextFormat">
+            <summary>
+            A Direct2D TextFormat.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.Bold">
+            <summary>
+            Gets a value that indicates whether this Font is bold.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.Italic">
+            <summary>
+            Gets a value that indicates whether this Font is italic.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.WordWeapping">
+            <summary>
+            Enables or disables word wrapping for this Font.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.FontSize">
+            <summary>
+            Gets the size of this Font measured in pixels.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.FontFamilyName">
+            <summary>
+            Gets the name of this Fonts family
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.TextFormat)">
+            <summary>
+            Initializes a new Font by using the given text format.
+            </summary>
+            <param name="textFormat"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.Factory,System.String,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new Font by using the specified name and style.
+            </summary>
+            <param name="factory">The FontFactory from your Graphics device.</param>
+            <param name="fontFamilyName">The name of the font family.</param>
+            <param name="size">The size of this Font.</param>
+            <param name="bold">A Boolean value indicating whether this Font is bold.</param>
+            <param name="italic">A Boolean value indicating whether this Font is italic.</param>
+            <param name="wordWrapping">A Boolean value indicating whether this Font uses word wrapping.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Finalize">
+            <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Font and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(GameOverlay.Drawing.Font)">
+            <summary>
+            Returns a value indicating whether two specified instances of Font represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.ToString">
+            <summary>
+            Converts this Font instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Font.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Font.
+            </summary>
+            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Dispose">
+            <summary>
+            Releases all resources used by this Font.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.op_Implicit(GameOverlay.Drawing.Font)~SharpDX.DirectWrite.TextFormat">
+            <summary>
+            Converts this Font to a Direct2D TextFormat.
+            </summary>
+            <param name="font"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(GameOverlay.Drawing.Font,GameOverlay.Drawing.Font)">
+            <summary>
+            Returns a value indicating whether two specified instances of Font represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Geometry">
+            <summary>
+            Represents a Geometry which can be drawn by a Graphics device.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Geometry.IsOpen">
+            <summary>
+            Determines whether this Geometry is open.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.#ctor(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new Geometry using a Graphics device.
+            </summary>
+            <param name="device"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Finalize">
+            <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.BeginFigure(GameOverlay.Drawing.Point,System.Boolean)">
+            <summary>
+            Starts a new figure within this Geometry using a starting point.
+            </summary>
+            <param name="point">The start point for this figure.</param>
+            <param name="fill">A Boolean value determining whether this figure can be filled by a Graphics device.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.BeginFigure(GameOverlay.Drawing.Line,System.Boolean)">
+            <summary>
+            Starts a new figure within this Geometry using a starting line.
+            </summary>
+            <param name="line">The first line within this figure.</param>
+            <param name="fill">A Boolean value determining whether this figure can be filled by a Graphics device.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.EndFigure(System.Boolean)">
+            <summary>
+            Ends the currently started figure.
+            </summary>
+            <param name="closed">A Boolean value indicating whether this figure should automatically be closen by the Graphics device.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.AddPoint(GameOverlay.Drawing.Point)">
+            <summary>
+            Adds a new Point within the current figure.
+            </summary>
+            <param name="point">A Point which will be added to this figure</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.AddRectangle(GameOverlay.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Creates a new figure from a Rectangle.
+            </summary>
+            <param name="rectangle">The Rectangle used to create a new figure.</param>
+            <param name="fill">A Boolean value determining whether this figure can be filled by a Graphics device.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.AddCurve(GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Adds a curved line to the currently open figure.
+            </summary>
+            <param name="point">The end point of the curved line.</param>
+            <param name="radius">The radius of the resulting arc in degrees.</param>
+            <param name="rotationAngle">A value determining the rotation angle this curve.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.AddCurve(GameOverlay.Drawing.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Adds a curved line to the currently open figure.
+            </summary>
+            <param name="point">The end point of the curved line.</param>
+            <param name="radius_x">The radius on the X-Axis of the resulting arc in degrees.</param>
+            <param name="radius_y">The radius on the Y-Axis of the resulting arc in degrees.</param>
+            <param name="rotationAngle">A value determining the rotation angle this curve.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Close">
+            <summary>
+            Closes this Geometry and prevents further manipulation.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Geometry and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(GameOverlay.Drawing.Geometry)">
+            <summary>
+            Returns a value indicating whether two specified instances of Geometry represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.ToString">
+            <summary>
+            Converts this Geometry instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Geometry.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Geometry.
+            </summary>
+            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Dispose">
+            <summary>
+            Releases all resources used by this Geometry.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.op_Implicit(GameOverlay.Drawing.Geometry)~SharpDX.Direct2D1.Geometry">
+            <summary>
+            Returns the Direct2D Geometry used by this object.
+            </summary>
+            <param name="geometry"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(GameOverlay.Drawing.Geometry,GameOverlay.Drawing.Geometry)">
+            <summary>
+            Returns a value indicating whether two specified instances of Geometry represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Graphics">
+            <summary>
+            Encapsulates a Direct2D drawing surface.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.IsResizing">
+            <summary>
+            Indicates whether this Graphics surface will change its size on the next Scene.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.IsInitialized">
+            <summary>
+            Indicates whether this Graphics surface is initialized.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.IsDrawing">
+            <summary>
+            Indicates whether this Graphics surface is currently drawing on a Scene.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.MeasureFPS">
+            <summary>
+            Determines whether this Graphics device will measure the resulting frames per second.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.PerPrimitiveAntiAliasing">
+            <summary>
+            Determines whether Anti-Aliasing for each primitive (Line, Rectangle, Circle, Geometry) is enabled.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.TextAntiAliasing">
+            <summary>
+            Determines whether Anti-Aliasing for Text is enabled.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.VSync">
+            <summary>
+            Determines whether this Graphics surface will be locked to the monitors refresh rate.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.UseMultiThreadedFactories">
+            <summary>
+            Determines whether factories (Font, Geometry, Brush) will be used in a multi-threaded environment.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.Width">
+            <summary>
+            Gets or sets the width of this Graphics surface.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.Height">
+            <summary>
+            Gets or sets the width of this Graphics surface.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.FPS">
+            <summary>
+            Specifies the images per second in which this graphics device redraws.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Graphics.WindowHandle">
+            <summary>
+            Gets or sets the window handle of the Graphics surface.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.#ctor">
+            <summary>
+            Initializes a new Graphics surface.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new Graphics surface using a window handle.
+            </summary>
+            <param name="windowHandle">A handle to the window used as a surface.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.#ctor(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Graphics surface using a window handle and its width and height.
+            </summary>
+            <param name="windowHandle">A handle to the window used as a surface.</param>
+            <param name="width">A value indicating the width of the surface.</param>
+            <param name="height">A value indicating the height of the surface.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Finalize">
+            <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Setup">
+            <summary>
+            Sets up and finishes the initialization of this Graphics surface by using this objects properties.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Destroy">
+            <summary>
+            Destroys an already initialized Graphics surface and frees its resources.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Resize(System.Int32,System.Int32)">
+            <summary>
+            Tells the Graphics surface to resize itself on the next Scene.
+            </summary>
+            <param name="width">A value Determining the new width of this Graphics surface.</param>
+            <param name="height">A value Determining the new height of this Graphics surface.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.BeginScene">
+            <summary>
+            Starts a new Scene (Frame).
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.ClearScene">
+            <summary>
+            Clears the current Scene (Frame) using a transparent background color.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.ClearScene(GameOverlay.Drawing.Color)">
+            <summary>
+            Clears the current Scene (Frame) using the given background color.
+            </summary>
+            <param name="color">The background color of this Scene.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.ClearScene(GameOverlay.Drawing.SolidBrush)">
+            <summary>
+            Clears the current Scene (Frame) using the given brush.
+            </summary>
+            <param name="brush">The brush used to draw the background of this Scene.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.EndScene">
+            <summary>
+            Ends the current Scene (Frame).
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.UseScene">
+            <summary>
+            Creates a new Scene which handles BeginScene and EndScene within a using block.
+            </summary>
+            <returns>The Scene this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateSolidBrush(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new SolidBrush by using the given color components.
+            </summary>
+            <param name="r">The red component value of this color.</param>
+            <param name="g">The green component value of this color.</param>
+            <param name="b">The blue component value of this color.</param>
+            <param name="a">The alpha component value of this color.</param>
+            <returns>The SolidBrush this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateSolidBrush(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new SolidBrush by using the given color components.
+            </summary>
+            <param name="r">The red component value of this color.</param>
+            <param name="g">The green component value of this color.</param>
+            <param name="b">The blue component value of this color.</param>
+            <param name="a">The alpha component value of this color.</param>
+            <returns>The SolidBrush this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateSolidBrush(GameOverlay.Drawing.Color)">
+            <summary>
+            Creates a new SolidBrush by using the given color structure.
+            </summary>
+            <param name="color">A value representing the ARGB components used to create a SolidBrush.</param>
+            <returns>The SolidBrush this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateFont(System.String,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new Font by using the given font family, size and styles.
+            </summary>
+            <param name="fontFamilyName">The name of any installed font family.</param>
+            <param name="size">A value indicating the size of a font in pixels.</param>
+            <param name="bold">A Boolean determining whether this font is bold.</param>
+            <param name="italic">A Boolean determining whether this font is italic.</param>
+            <param name="wordWrapping">A Boolean determining whether this font uses word wrapping.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateImage(System.Byte[])">
+            <summary>
+            Creates a new Image by using the given bytes.
+            </summary>
+            <param name="bytes">An image loaded into a byte array.</param>
+            <returns>The Image this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateImage(System.String)">
+            <summary>
+            Creates a new Image from an image file on the disk.
+            </summary>
+            <param name="path">The path to an image file.</param>
+            <returns>The Image this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.CreateGeometry">
+            <summary>
+            Creates a new Geometry used to draw complex figures.
+            </summary>
+            <returns>The Geometry this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawCircle(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a circle using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="x">The x-coordinate of the center of the circle.</param>
+            <param name="y">The y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Draws a circle using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Circle,System.Single)">
+            <summary>
+            Draws a circle using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="circle">A Circle structure which includes the dimension of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a circle with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="x">The x-coordinate of the center of the circle.</param>
+            <param name="y">The y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Draws a circle with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Circle,System.Single)">
+            <summary>
+            Draws a circle with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="circle">A Circle structure which includes the dimension of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedCircle(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a circle with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="x">The x-coordinate of the center of the circle.</param>
+            <param name="y">The y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Draws a circle with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Circle,System.Single)">
+            <summary>
+            Draws a circle with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="circle">A Circle structure which includes the dimension of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillCircle(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single)">
+            <summary>
+            Fills a circle by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="x">The x-coordinate of the center of the circle.</param>
+            <param name="y">The y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single)">
+            <summary>
+            Fills a circle by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Circle)">
+            <summary>
+            Fills a circle by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the circle.</param>
+            <param name="circle">A Circle structure which includes the dimension of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineFillCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a filled circle with an outline around it.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="x">The x-coordinate of the center of the circle.</param>
+            <param name="y">The y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineFillCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Draws a filled circle with an outline around it.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineFillCircle(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Circle,System.Single)">
+            <summary>
+            Draws a filled circle with an outline around it.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the circle.</param>
+            <param name="circle">A Circle structure which includes the dimension of the circle.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawEllipse(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="x">The x-coordinate of the center of the ellipse.</param>
+            <param name="y">The y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of this ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of this ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of this ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of this ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DrawEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Ellipse,System.Single)">
+            <summary>
+            Draws an ellipse by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="ellipse">An Ellipse structure which includes the dimension of the ellipse.</param>
+            <param name="stroke">A value that determines the width/thickness of the circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the ellipse.</param>
+            <param name="x">The x-coordinate of the center of the ellipse.</param>
+            <param name="y">The y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the ellipse.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Ellipse,System.Single)">
+            <summary>
+            Draws an ellipse with an outline around it using the given brush and dimension.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the ellipse.</param>
+            <param name="ellipse">An Ellipse structure which includes the dimension of the ellipse.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedEllipse(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="x">The x-coordinate of the center of the ellipse.</param>
+            <param name="y">The y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an ellipse with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.DashedEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Ellipse,System.Single)">
+            <summary>
+            Draws an ellipse with a dashed line by using the given brush and dimension.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="ellipse">An Ellipse structure which includes the dimension of the ellipse.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillEllipse(GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Fills an ellipse by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="x">The x-coordinate of the center of the ellipse.</param>
+            <param name="y">The y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single)">
+            <summary>
+            Fills an ellipse by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="location">A Point structureure which includes the x- and y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.FillEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Ellipse)">
+            <summary>
+            Fills an ellipse by using the given brush and dimesnion.
+            </summary>
+            <param name="brush">A brush that determines the color of the ellipse.</param>
+            <param name="ellipse">An Ellipse structure which includes the dimension of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineFillEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a filled ellipse with an outline around it.
+            </summary>
+            <param name="outline">A brush that determines the color of the outline.</param>
+            <param name="fill">A brush that determines the color of the ellipse.</param>
+            <param name="x">The x-coordinate of the center of the ellipse.</param>
+            <param name="y">The y-coordinate of the center of the ellipse.</param>
+            <param name="radiusX">The radius of the ellipse on the x-axis.</param>
+            <param name="radiusY">The radius of the ellipse on the y-axis.</param>
+            <param name="stroke">A value that determines the width/thickness of the ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.OutlineFillEllipse(GameOverlay.Drawing.IBrush,GameOverlay.Drawing.IBrush,GameOverlay.Drawing.Point,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a filled ellipse with an outline around it.
+            </s

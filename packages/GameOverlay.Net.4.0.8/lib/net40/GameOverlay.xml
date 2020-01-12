@@ -6,75 +6,116 @@
     <members>
         <member name="T:GameOverlay.Drawing.Color">
             <summary>
-            Represents an ARGB (alpha, red, green, blue) color.
+            Represents an ARGB (alpha, red, green, blue) Color.
             </summary>
         </member>
         <member name="P:GameOverlay.Drawing.Color.Transparent">
             <summary>
-            Returns a transparent color.
+            Returns a transparent Color.
             </summary>
         </member>
         <member name="P:GameOverlay.Drawing.Color.Red">
             <summary>
-            Returns a red color.
+            Returns a red Color.
             </summary>
         </member>
         <member name="P:GameOverlay.Drawing.Color.Green">
             <summary>
-            Returns a green color.
+            Returns a green Color.
             </summary>
         </member>
         <member name="P:GameOverlay.Drawing.Color.Blue">
             <summary>
-            Returns a blue color.
+            Returns a blue Color.
             </summary>
         </member>
         <member name="F:GameOverlay.Drawing.Color.A">
             <summary>
-            Gets the alpha component value of this color.
+            Gets the alpha component value of this Color.
             </summary>
         </member>
         <member name="F:GameOverlay.Drawing.Color.R">
             <summary>
-            Gets the red component value of this color.
+            Gets the red component value of this Color.
             </summary>
         </member>
         <member name="F:GameOverlay.Drawing.Color.G">
             <summary>
-            Gets the green component value of this color.
+            Gets the green component value of this Color.
             </summary>
         </member>
         <member name="F:GameOverlay.Drawing.Color.B">
             <summary>
-            Gets the blue component value of this color.
+            Gets the blue component value of this Color.
             </summary>
         </member>
         <member name="M:GameOverlay.Drawing.Color.#ctor(System.Single,System.Single,System.Single,System.Single)">
             <summary>
-            Initializes a new color using the specified components.
+            Initializes a new Color using the specified components.
             </summary>
-            <param name="r">The red component value of this color.</param>
-            <param name="g">The green component value of this color.</param>
-            <param name="b">The blue component value of this color.</param>
-            <param name="a">The alpha component value of this color.</param>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
         </member>
         <member name="M:GameOverlay.Drawing.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Initializes a new color using the specified components.
+            Initializes a new Color using the specified components.
             </summary>
-            <param name="r">The red component value of this color.</param>
-            <param name="g">The green component value of this color.</param>
-            <param name="b">The blue component value of this color.</param>
-            <param name="a">The alpha component value of this color.</param>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
         </member>
         <member name="M:GameOverlay.Drawing.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
             <summary>
-            Initializes a new color using the specified components.
+            Initializes a new Color using the specified components.
             </summary>
-            <param name="r">The red component value of this color.</param>
-            <param name="g">The green component value of this color.</param>
-            <param name="b">The blue component value of this color.</param>
-            <param name="a">The alpha component value of this color.</param>
+            <param name="r">The red component value of this Color.</param>
+            <param name="g">The green component value of this Color.</param>
+            <param name="b">The blue component value of this Color.</param>
+            <param name="a">The alpha component value of this Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Single)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Int32)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.#ctor(GameOverlay.Drawing.Color,System.Byte)">
+            <summary>
+            Initializes a new Color using the specified Color and the alpha value.
+            </summary>
+            <param name="color">A Color structure.</param>
+            <param name="alpha">The alpha component of the Color.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Color and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(GameOverlay.Drawing.Color)">
+            <summary>
+            Returns a value indicating whether two specified instances of Color represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:GameOverlay.Drawing.Color.ToString">
             <summary>
@@ -107,6 +148,30 @@
             </summary>
             <param name="color"></param>
         </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Equality(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.op_Inequality(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Color.Equals(GameOverlay.Drawing.Color,GameOverlay.Drawing.Color)">
+            <summary>
+            Returns a value indicating whether two specified instances of Color represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
         <member name="T:GameOverlay.Drawing.CrosshairStyle">
             <summary>
                 Offers different built-in styles for crosshairs
@@ -137,9 +202,122 @@
                 Draws diagonal lines
             </summary>
         </member>
+        <member name="T:GameOverlay.Drawing.Font">
+            <summary>
+            Defines a particular format for text, including font family name, size, and style attributes.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Font.TextFormat">
+            <summary>
+            A Direct2D TextFormat.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.Bold">
+            <summary>
+            Gets a value that indicates whether this Font is bold.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.Italic">
+            <summary>
+            Gets a value that indicates whether this Font is italic.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.WordWeapping">
+            <summary>
+            Enables or disables word wrapping for this Font.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.FontSize">
+            <summary>
+            Gets the size of this Font measured in pixels.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Font.FontFamilyName">
+            <summary>
+            Gets the name of this Fonts family
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.TextFormat)">
+            <summary>
+            Initializes a new Font by using the given text format.
+            </summary>
+            <param name="textFormat"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.Factory,System.String,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new Font by using the specified name and style.
+            </summary>
+            <param name="factory">The FontFactory from your Graphics device.</param>
+            <param name="fontFamilyName">The name of the font family.</param>
+            <param name="size">The size of this Font.</param>
+            <param name="bold">A Boolean value indicating whether this Font is bold.</param>
+            <param name="italic">A Boolean value indicating whether this Font is italic.</param>
+            <param name="wordWrapping">A Boolean value indicating whether this Font uses word wrapping.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Finalize">
+            <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Font and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(GameOverlay.Drawing.Font)">
+            <summary>
+            Returns a value indicating whether two specified instances of Font represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.ToString">
+            <summary>
+            Converts this Font instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Font.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Font.
+            </summary>
+            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Dispose">
+            <summary>
+            Releases all resources used by this Font.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.op_Implicit(GameOverlay.Drawing.Font)~SharpDX.DirectWrite.TextFormat">
+            <summary>
+            Converts this Font to a Direct2D TextFormat.
+            </summary>
+            <param name="font"></param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Font.Equals(GameOverlay.Drawing.Font,GameOverlay.Drawing.Font)">
+            <summary>
+            Returns a value indicating whether two specified instances of Font represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
         <member name="T:GameOverlay.Drawing.Geometry">
             <summary>
             Represents a Geometry which can be drawn by a Graphics device.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Geometry.IsOpen">
+            <summary>
+            Determines whether this Geometry is open.
             </summary>
         </member>
         <member name="M:GameOverlay.Drawing.Geometry.#ctor(GameOverlay.Drawing.Graphics)">
@@ -208,6 +386,32 @@
             Closes this Geometry and prevents further manipulation.
             </summary>
         </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Geometry and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(GameOverlay.Drawing.Geometry)">
+            <summary>
+            Returns a value indicating whether two specified instances of Geometry represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Geometry.ToString">
+            <summary>
+            Converts this Geometry instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Geometry.</returns>
+        </member>
         <member name="M:GameOverlay.Drawing.Geometry.Dispose(System.Boolean)">
             <summary>
             Releases all resources used by this Geometry.
@@ -225,599 +429,13 @@
             </summary>
             <param name="geometry"></param>
         </member>
-        <member name="T:GameOverlay.Drawing.IBrush">
+        <member name="M:GameOverlay.Drawing.Geometry.Equals(GameOverlay.Drawing.Geometry,GameOverlay.Drawing.Geometry)">
             <summary>
-            Represents a Brush used to draw with a Graphics surface.
+            Returns a value indicating whether two specified instances of Geometry represent the same value.
             </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.IBrush.Brush">
-            <summary>
-            Gets or sets the Brush
-            </summary>
-        </member>
-        <member name="T:GameOverlay.Drawing.Image">
-            <summary>
-            Represents an Image which can be drawn using a Graphics surface.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Image.Bitmap">
-            <summary>
-            The SharpDX Bitmap
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.Image.Width">
-            <summary>
-            Gets the width of this Image
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.Image.Height">
-            <summary>
-            Gets the height of this Image
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.#ctor(SharpDX.Direct2D1.RenderTarget,System.Byte[])">
-            <summary>
-            Initializes a new Image for the given device by using a byte[].
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="bytes">A byte[] containing image data.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.#ctor(SharpDX.Direct2D1.RenderTarget,System.String)">
-            <summary>
-            Initializes a new Image for the given device by using a file on disk.
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="path">The path to an image file on disk.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.#ctor(GameOverlay.Drawing.Graphics,System.Byte[])">
-            <summary>
-            Initializes a new Image for the given device by using a byte[].
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="bytes">A byte[] containing image data.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.#ctor(GameOverlay.Drawing.Graphics,System.String)">
-            <summary>
-            Initializes a new Image for the given device by using a file on disk.
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="path">The path to an image file on disk.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.Finalize">
-            <summary>
-            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.Dispose(System.Boolean)">
-            <summary>
-            Releases all resources used by this Image.
-            </summary>
-            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.Dispose">
-            <summary>
-            Releases all resources used by this Image.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Image.op_Implicit(GameOverlay.Drawing.Image)~SharpDX.Direct2D1.Bitmap">
-            <summary>
-            Converts an Image to a SharpDX Bitmap.
-            </summary>
-            <param name="image">The Image object.</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.LinearGradientBrush">
-            <summary>
-            Represents a linear gradient brush used with a Graphics surface.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.LinearGradientBrush.Brush">
-            <summary>
-            Gets or sets the underlying Brush.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.LinearGradientBrush.Start">
-            <summary>
-            Gets or sets the start point of this LineatGradientBrush.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.LinearGradientBrush.End">
-            <summary>
-            Gets or sets the end point of this LineatGradientBrush.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.#ctor(SharpDX.Direct2D1.RenderTarget,GameOverlay.Drawing.Color[])">
-            <summary>
-            Initializes a new LinearGradientBrush using the target device and an Color[].
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="colors">The colors</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.#ctor(GameOverlay.Drawing.Graphics,GameOverlay.Drawing.Color[])">
-            <summary>
-            Initializes a new LinearGradientBrush using the target device and an Color[].
-            </summary>
-            <param name="device">The Graphics device.</param>
-            <param name="colors">The colors</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Finalize">
-            <summary>
-            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.SetRange(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
-            <summary>
-            Sets the range where the gradient gets applied.
-            </summary>
-            <param name="start">A Point structure inclduing the coordinates for the start point of this LinearGradientBrush.</param>
-            <param name="end">A Point structure inclduing the coordinates for the end point of this LinearGradientBrush.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.SetRange(System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Sets the range where the gradient gets applied.
-            </summary>
-            <param name="startX">The x-coordinate of the start point of this LinearGradientBrush.</param>
-            <param name="startY">The y-coordinate of the start point of this LinearGradientBrush.</param>
-            <param name="endX">The x-coordinate of the end point of this LinearGradientBrush.</param>
-            <param name="endY">The y-coordinate of the end point of this LinearGradientBrush.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Dispose(System.Boolean)">
-            <summary>
-            Releases all resources used by this LinearGradientBrush.
-            </summary>
-            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Dispose">
-            <summary>
-            Releases all resources used by this LinearGradientBrush.
-            </summary>
-        </member>
-        <member name="T:GameOverlay.Drawing.Circle">
-            <summary>
-            Represents the dimension of a circle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Circle.Location">
-            <summary>
-            The position of this Circle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Circle.Radius">
-            <summary>
-            The Radius of this Circle.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.#ctor(GameOverlay.Drawing.Point,System.Single)">
-            <summary>
-            Initializes a new Circle by using the given location and radius.
-            </summary>
-            <param name="location">A Point structure including the x- and y-coordinates of the center of a circle.</param>
-            <param name="radius">The radius of a circle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.#ctor(System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new Circle by using the given location and radius.
-            </summary>
-            <param name="x">The x-coordinate of the center of a circle.</param>
-            <param name="y">The y-coordinate of the center of a circle.</param>
-            <param name="radius">The radius of a circle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.#ctor(GameOverlay.Drawing.Point,System.Int32)">
-            <summary>
-            Initializes a new Circle by using the given location and radius.
-            </summary>
-            <param name="location">A Point structure including the x- and y-coordinates of the center of a circle.</param>
-            <param name="radius">The radius of a circle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Circle by using the given location and radius.
-            </summary>
-            <param name="x">The x-coordinate of the center of a circle.</param>
-            <param name="y">The y-coordinate of the center of a circle.</param>
-            <param name="radius">The radius of a circle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.ToString">
-            <summary>
-            Converts the Circle structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this Circle.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Circle.op_Implicit(GameOverlay.Drawing.Circle)~SharpDX.Direct2D1.Ellipse">
-            <summary>
-            Converts this Circle to a SharpDX ellipse.
-            </summary>
-            <param name="circle">A Circle structure.</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.Ellipse">
-            <summary>
-            Represents the dimension of an ellipse.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Ellipse.Location">
-            <summary>
-            The position of this ellipse.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Ellipse.RadiusX">
-            <summary>
-            The radius on the x-axis of this ellipse.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Ellipse.RadiusY">
-            <summary>
-            The radius on the y-axis of this ellipse.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(GameOverlay.Drawing.Point,System.Single,System.Single)">
-            <summary>
-            Initializes a new Ellipse using the given location and radius.
-            </summary>
-            <param name="location">A Location structure including the center x- and y-coordinate of an ellipse.</param>
-            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
-            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(GameOverlay.Drawing.Point,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Ellipse using the given location and radius.
-            </summary>
-            <param name="location">A Location structure including the center x- and y-coordinate of an ellipse.</param>
-            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
-            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new Ellipse using the given location and radius.
-            </summary>
-            <param name="x">The center x-coordinate of an ellipse.</param>
-            <param name="y">The center y-coordinate of an ellipse.</param>
-            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
-            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Ellipse using the given location and radius.
-            </summary>
-            <param name="x">The center x-coordinate of an ellipse.</param>
-            <param name="y">The center y-coordinate of an ellipse.</param>
-            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
-            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.ToString">
-            <summary>
-            Converts the Ellipse structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this Ellipse.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Ellipse.op_Implicit(GameOverlay.Drawing.Ellipse)~SharpDX.Direct2D1.Ellipse">
-            <summary>
-            Converts an Ellipse to a SharpDX Ellipse.
-            </summary>
-            <param name="ellipse">An Ellipse structure.</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.Line">
-            <summary>
-            Represents the start and end Point of a line.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Line.Start">
-            <summary>
-            The staring Point of this Line.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Line.End">
-            <summary>
-            The ending Point of this Line.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Line.#ctor(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
-            <summary>
-            Initializes a new Line using the given points.
-            </summary>
-            <param name="start">A Point structure including the start coordinates of the line.</param>
-            <param name="end">A Point structure including the end coordinates of the line.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Line.#ctor(System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new Line using the given points.
-            </summary>
-            <param name="startX">The x-coordinate of the start point of the line.</param>
-            <param name="startY">The y-coordinate of the start point of the line.</param>
-            <param name="endX">The x-coordinate of the end point of the line.</param>
-            <param name="endY">The y-coordinate of the end point of the line.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Line.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Line using the given points.
-            </summary>
-            <param name="startX">The x-coordinate of the start point of the line.</param>
-            <param name="startY">The y-coordinate of the start point of the line.</param>
-            <param name="endX">The x-coordinate of the end point of the line.</param>
-            <param name="endY">The y-coordinate of the end point of the line.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Line.ToString">
-            <summary>
-            Converts the Line structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this Line.</returns>
-        </member>
-        <member name="T:GameOverlay.Drawing.Point">
-            <summary>
-            Represents the x- and y-coordinates of a point.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Point.X">
-            <summary>
-            The x-coordinate of this Point.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Point.Y">
-            <summary>
-            The y-coordinate of this Point.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Point.#ctor(System.Single,System.Single)">
-            <summary>
-            Initializes a new Point using the given coordinates.
-            </summary>
-            <param name="x">The x-coordinate of this Point.</param>
-            <param name="y">The y-coordinate of this Point.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Point.#ctor(System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Point using the given coordinates.
-            </summary>
-            <param name="x">The x-coordinate of this Point.</param>
-            <param name="y">The y-coordinate of this Point.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Point.ToString">
-            <summary>
-            Converts the Point structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this Point.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Point.op_Implicit(GameOverlay.Drawing.Point)~SharpDX.Mathematics.Interop.RawVector2">
-            <summary>
-            Converts a Point structure to a SharpDX RawVector2.
-            </summary>
-            <param name="point">A Point structure.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Point.op_Implicit(SharpDX.Mathematics.Interop.RawVector2)~GameOverlay.Drawing.Point">
-            <summary>
-            Converts a SharpDX RawVector2 structure to a Point structure.
-            </summary>
-            <param name="vector">A SharpDX RawVector2.</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.Rectangle">
-            <summary>
-            Represents the dimension of a rectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Rectangle.Left">
-            <summary>
-            The x-coordinate of the upper-left corner of the Rectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Rectangle.Top">
-            <summary>
-            The y-coordinate of the upper-left corner of the Rectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Rectangle.Right">
-            <summary>
-            The x-coordinate of the bottom-right corner of the Rectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Rectangle.Bottom">
-            <summary>
-            The y-coordinate of the bottom-right corner of the Rectangle.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.Rectangle.Width">
-            <summary>
-            Gets the width of this Rectangle.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Drawing.Rectangle.Height">
-            <summary>
-            Gets the height of this Rectangle.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.#ctor(System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new Rectangle using the given coordinates.
-            </summary>
-            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Rectangle using the given coordinates.
-            </summary>
-            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.Create(System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Creates a new Rectangle structure using the given dimension.
-            </summary>
-            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="width">The width of the rectangle.</param>
-            <param name="height">The height of the rectangle</param>
-            <returns>The Rectangle this method creates.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.Create(System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Creates a new Rectangle structure using the given dimension.
-            </summary>
-            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="width">The width of the rectangle.</param>
-            <param name="height">The height of the rectangle</param>
-            <returns>The Rectangle this method creates.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.ToString">
-            <summary>
-            Converts this Rectangle structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this Rectangle.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.Rectangle.op_Implicit(GameOverlay.Drawing.Rectangle)~SharpDX.Mathematics.Interop.RawRectangleF">
-            <summary>
-            Converts a Rectangle structure to a SharpDX RawRectangleF.
-            </summary>
-            <param name="rectangle">A Rectangle structure.</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.RoundedRectangle">
-            <summary>
-            Represents the dimension of a rectangle with rounded edges.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.RoundedRectangle.Rectangle">
-            <summary>
-            The Rectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.RoundedRectangle.RadiusX">
-            <summary>
-            The radius on the x-axis of this RoundedRectangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.RoundedRectangle.RadiusY">
-            <summary>
-            The radius on the y-axis of this RoundedRectangle.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(GameOverlay.Drawing.Rectangle,System.Single)">
-            <summary>
-            Initializes a new RoundedRectangle structure using then given dimension and radius.
-            </summary>
-            <param name="rectangle">A Rectangle structure including the dimension of the rectangle.</param>
-            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(GameOverlay.Drawing.Rectangle,System.Single,System.Single)">
-            <summary>
-            Initializes a new RoundedRectangle structure using then given dimension and radius.
-            </summary>
-            <param name="rectangle">A Rectangle structure including the dimension of the rectangle.</param>
-            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
-            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new RoundedRectangle structure using then given dimension and radius.
-            </summary>
-            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new RoundedRectangle structure using then given dimension and radius.
-            </summary>
-            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
-            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
-            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.ToString">
-            <summary>
-            Converts this RoundedRectangle structure to a human-readable string.
-            </summary>
-            <returns>A string representation of this RoundedRectangle</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Creates a new RoundedRectangle using the given dimension and radius.
-            </summary>
-            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="width">The width of the Rectangle.</param>
-            <param name="height">The height of the Rectangle.</param>
-            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
-            <returns>The RoundedRectangle this method creates.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Creates a new RoundedRectangle using the given dimension and radius.
-            </summary>
-            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
-            <param name="width">The width of the Rectangle.</param>
-            <param name="height">The height of the Rectangle.</param>
-            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
-            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
-            <returns>The RoundedRectangle this method creates.</returns>
-        </member>
-        <member name="M:GameOverlay.Drawing.RoundedRectangle.op_Implicit(GameOverlay.Drawing.RoundedRectangle)~SharpDX.Direct2D1.RoundedRectangle">
-            <summary>
-            Converts a RoundedRectangle structure to a SharpDX RoundedRectangle.
-            </summary>
-            <param name="rectangle">A RoundedRectangle struct</param>
-        </member>
-        <member name="T:GameOverlay.Drawing.Triangle">
-            <summary>
-            Represents the dimension of a triangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Triangle.A">
-            <summary>
-            The lower-left Point of this Triangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Triangle.B">
-            <summary>
-            The lower-right Point of this Triangle.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.Drawing.Triangle.C">
-            <summary>
-            The upper-center Point of this Triangle.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Drawing.Triangle.#ctor(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
-            <summary>
-            Initializes a new Triangle using the given Points.
-            </summary>
-            <param name="a">The lower-left Point of this Triangle.</param>
-            <param name="b">The lower-right Point of this Triangle.</param>
-            <param name="c">The upper-center Point of this Triangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Triangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
-            <summary>
-            Initializes a new Triangle using the given Points.
-            </summary>
-            <param name="a_x">The x-coordinate of the lower-left Point of this Triangle.</param>
-            <param name="a_y">The y-coordinate of the lower-left Point of this Triangle.</param>
-            <param name="b_x">The x-coordinate of the lower-right Point of this Triangle.</param>
-            <param name="b_y">The y-coordinate lower-right Point of this Triangle.</param>
-            <param name="c_x">The x-coordinate of the upper-center Point of this Triangle.</param>
-            <param name="c_y">The y-coordinate upper-center Point of this Triangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Triangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Initializes a new Triangle using the given Points.
-            </summary>
-            <param name="a_x">The x-coordinate of the lower-left Point of this Triangle.</param>
-            <param name="a_y">The y-coordinate of the lower-left Point of this Triangle.</param>
-            <param name="b_x">The x-coordinate of the lower-right Point of this Triangle.</param>
-            <param name="b_y">The y-coordinate lower-right Point of this Triangle.</param>
-            <param name="c_x">The x-coordinate of the upper-center Point of this Triangle.</param>
-            <param name="c_y">The y-coordinate upper-center Point of this Triangle.</param>
-        </member>
-        <member name="M:GameOverlay.Drawing.Triangle.ToString">
-            <summary>
-            Converts this Triangle structure to a human-readable string.
-            </summary>
-            <returns>The string representation of this Triangle.</returns>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
         </member>
         <member name="T:GameOverlay.Drawing.Graphics">
             <summary>
@@ -1939,6 +1557,32 @@
             </summary>
             <returns>The FontFactory of this Graphics surface.</returns>
         </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Graphics and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.Equals(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Returns a value indicating whether two specified instances of Graphics represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Graphics.ToString">
+            <summary>
+            Converts this Graphics instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Graphics.</returns>
+        </member>
         <member name="M:GameOverlay.Drawing.Graphics.Dispose(System.Boolean)">
             <summary>
             Releases all resources used by this Graphics surface.
@@ -1950,83 +1594,882 @@
             Releases all resources used by this Graphics surface.
             </summary>
         </member>
-        <member name="T:GameOverlay.Drawing.Font">
+        <member name="M:GameOverlay.Drawing.Graphics.Equals(GameOverlay.Drawing.Graphics,GameOverlay.Drawing.Graphics)">
             <summary>
-            Defines a particular format for text, including font family name, size, and style attributes.
+            Returns a value indicating whether two specified instances of Graphics represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Circle">
+            <summary>
+            Represents the dimension of a circle.
             </summary>
         </member>
-        <member name="F:GameOverlay.Drawing.Font.TextFormat">
+        <member name="F:GameOverlay.Drawing.Circle.Location">
             <summary>
-            A Direct2D TextFormat.
+            The position of this Circle.
             </summary>
         </member>
-        <member name="P:GameOverlay.Drawing.Font.Bold">
+        <member name="F:GameOverlay.Drawing.Circle.Radius">
             <summary>
-            Gets a value that indicates whether this Font is bold.
+            The Radius of this Circle.
             </summary>
         </member>
-        <member name="P:GameOverlay.Drawing.Font.Italic">
+        <member name="M:GameOverlay.Drawing.Circle.#ctor(GameOverlay.Drawing.Point,System.Single)">
             <summary>
-            Gets a value that indicates whether this Font is italic.
+            Initializes a new Circle by using the given location and radius.
+            </summary>
+            <param name="location">A Point structure including the x- and y-coordinates of the center of a circle.</param>
+            <param name="radius">The radius of a circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Circle by using the given location and radius.
+            </summary>
+            <param name="x">The x-coordinate of the center of a circle.</param>
+            <param name="y">The y-coordinate of the center of a circle.</param>
+            <param name="radius">The radius of a circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.#ctor(GameOverlay.Drawing.Point,System.Int32)">
+            <summary>
+            Initializes a new Circle by using the given location and radius.
+            </summary>
+            <param name="location">A Point structure including the x- and y-coordinates of the center of a circle.</param>
+            <param name="radius">The radius of a circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Circle by using the given location and radius.
+            </summary>
+            <param name="x">The x-coordinate of the center of a circle.</param>
+            <param name="y">The y-coordinate of the center of a circle.</param>
+            <param name="radius">The radius of a circle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Circle and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.ToString">
+            <summary>
+            Converts the Circle structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Circle.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.op_Implicit(GameOverlay.Drawing.Circle)~SharpDX.Direct2D1.Ellipse">
+            <summary>
+            Converts this Circle to a SharpDX ellipse.
+            </summary>
+            <param name="circle">A Circle structure.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.op_Equality(GameOverlay.Drawing.Circle,GameOverlay.Drawing.Circle)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Circle.op_Inequality(GameOverlay.Drawing.Circle,GameOverlay.Drawing.Circle)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Ellipse">
+            <summary>
+            Represents the dimension of an ellipse.
             </summary>
         </member>
-        <member name="P:GameOverlay.Drawing.Font.WordWeapping">
+        <member name="F:GameOverlay.Drawing.Ellipse.Location">
             <summary>
-            Enables or disables word wrapping for this Font.
+            The position of this ellipse.
             </summary>
         </member>
-        <member name="P:GameOverlay.Drawing.Font.FontSize">
+        <member name="F:GameOverlay.Drawing.Ellipse.RadiusX">
             <summary>
-            Gets the size of this Font measured in pixels.
+            The radius on the x-axis of this ellipse.
             </summary>
         </member>
-        <member name="P:GameOverlay.Drawing.Font.FontFamilyName">
+        <member name="F:GameOverlay.Drawing.Ellipse.RadiusY">
             <summary>
-            Gets the name of this Fonts family
+            The radius on the y-axis of this ellipse.
             </summary>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.TextFormat)">
+        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(GameOverlay.Drawing.Point,System.Single,System.Single)">
             <summary>
-            Initializes a new Font by using the given text format.
+            Initializes a new Ellipse using the given location and radius.
             </summary>
-            <param name="textFormat"></param>
+            <param name="location">A Location structure including the center x- and y-coordinate of an ellipse.</param>
+            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
+            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.#ctor(SharpDX.DirectWrite.Factory,System.String,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(GameOverlay.Drawing.Point,System.Int32,System.Int32)">
             <summary>
-            Initializes a new Font by using the specified name and style.
+            Initializes a new Ellipse using the given location and radius.
             </summary>
-            <param name="factory">The FontFactory from your Graphics device.</param>
-            <param name="fontFamilyName">The name of the font family.</param>
-            <param name="size">The size of this Font.</param>
-            <param name="bold">A Boolean value indicating whether this Font is bold.</param>
-            <param name="italic">A Boolean value indicating whether this Font is italic.</param>
-            <param name="wordWrapping">A Boolean value indicating whether this Font uses word wrapping.</param>
+            <param name="location">A Location structure including the center x- and y-coordinate of an ellipse.</param>
+            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
+            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.Finalize">
+        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Ellipse using the given location and radius.
+            </summary>
+            <param name="x">The center x-coordinate of an ellipse.</param>
+            <param name="y">The center y-coordinate of an ellipse.</param>
+            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
+            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Ellipse using the given location and radius.
+            </summary>
+            <param name="x">The center x-coordinate of an ellipse.</param>
+            <param name="y">The center y-coordinate of an ellipse.</param>
+            <param name="radiusX">The radius on the x-axis of this ellipse.</param>
+            <param name="radiusY">The radius on the y-axis of this ellipse.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Ellipse and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.ToString">
+            <summary>
+            Converts the Ellipse structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Ellipse.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.op_Implicit(GameOverlay.Drawing.Ellipse)~SharpDX.Direct2D1.Ellipse">
+            <summary>
+            Converts an Ellipse to a SharpDX Ellipse.
+            </summary>
+            <param name="ellipse">An Ellipse structure.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.op_Equality(GameOverlay.Drawing.Ellipse,GameOverlay.Drawing.Ellipse)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Ellipse.op_Inequality(GameOverlay.Drawing.Ellipse,GameOverlay.Drawing.Ellipse)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Line">
+            <summary>
+            Represents the start and end Point of a line.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Line.Start">
+            <summary>
+            The staring Point of this Line.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Line.End">
+            <summary>
+            The ending Point of this Line.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.#ctor(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
+            <summary>
+            Initializes a new Line using the given points.
+            </summary>
+            <param name="start">A Point structure including the start coordinates of the line.</param>
+            <param name="end">A Point structure including the end coordinates of the line.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Line using the given points.
+            </summary>
+            <param name="startX">The x-coordinate of the start point of the line.</param>
+            <param name="startY">The y-coordinate of the start point of the line.</param>
+            <param name="endX">The x-coordinate of the end point of the line.</param>
+            <param name="endY">The y-coordinate of the end point of the line.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Line using the given points.
+            </summary>
+            <param name="startX">The x-coordinate of the start point of the line.</param>
+            <param name="startY">The y-coordinate of the start point of the line.</param>
+            <param name="endX">The x-coordinate of the end point of the line.</param>
+            <param name="endY">The y-coordinate of the end point of the line.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Line and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.ToString">
+            <summary>
+            Converts the Line structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Line.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.op_Equality(GameOverlay.Drawing.Line,GameOverlay.Drawing.Line)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Line.op_Inequality(GameOverlay.Drawing.Line,GameOverlay.Drawing.Line)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Point">
+            <summary>
+            Represents the x- and y-coordinates of a point.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Point.X">
+            <summary>
+            The x-coordinate of this Point.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Point.Y">
+            <summary>
+            The y-coordinate of this Point.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new Point using the given coordinates.
+            </summary>
+            <param name="x">The x-coordinate of this Point.</param>
+            <param name="y">The y-coordinate of this Point.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Point using the given coordinates.
+            </summary>
+            <param name="x">The x-coordinate of this Point.</param>
+            <param name="y">The y-coordinate of this Point.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Point and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.ToString">
+            <summary>
+            Converts the Point structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Point.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.op_Implicit(GameOverlay.Drawing.Point)~SharpDX.Mathematics.Interop.RawVector2">
+            <summary>
+            Converts a Point structure to a SharpDX RawVector2.
+            </summary>
+            <param name="point">A Point structure.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.op_Implicit(SharpDX.Mathematics.Interop.RawVector2)~GameOverlay.Drawing.Point">
+            <summary>
+            Converts a SharpDX RawVector2 structure to a Point structure.
+            </summary>
+            <param name="vector">A SharpDX RawVector2.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.op_Equality(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Point.op_Inequality(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Rectangle">
+            <summary>
+            Represents the dimension of a rectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Rectangle.Left">
+            <summary>
+            The x-coordinate of the upper-left corner of the Rectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Rectangle.Top">
+            <summary>
+            The y-coordinate of the upper-left corner of the Rectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Rectangle.Right">
+            <summary>
+            The x-coordinate of the bottom-right corner of the Rectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Rectangle.Bottom">
+            <summary>
+            The y-coordinate of the bottom-right corner of the Rectangle.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Rectangle.Width">
+            <summary>
+            Gets the width of this Rectangle.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Rectangle.Height">
+            <summary>
+            Gets the height of this Rectangle.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Rectangle using the given coordinates.
+            </summary>
+            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Rectangle using the given coordinates.
+            </summary>
+            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.Create(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new Rectangle structure using the given dimension.
+            </summary>
+            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="width">The width of the rectangle.</param>
+            <param name="height">The height of the rectangle</param>
+            <returns>The Rectangle this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.Create(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new Rectangle structure using the given dimension.
+            </summary>
+            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="width">The width of the rectangle.</param>
+            <param name="height">The height of the rectangle</param>
+            <returns>The Rectangle this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Rectangle and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.ToString">
+            <summary>
+            Converts this Rectangle structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this Rectangle.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.op_Implicit(GameOverlay.Drawing.Rectangle)~SharpDX.Mathematics.Interop.RawRectangleF">
+            <summary>
+            Converts a Rectangle structure to a SharpDX RawRectangleF.
+            </summary>
+            <param name="rectangle">A Rectangle structure.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.op_Equality(GameOverlay.Drawing.Rectangle,GameOverlay.Drawing.Rectangle)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Rectangle.op_Inequality(GameOverlay.Drawing.Rectangle,GameOverlay.Drawing.Rectangle)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.RoundedRectangle">
+            <summary>
+            Represents the dimension of a rectangle with rounded edges.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.RoundedRectangle.Rectangle">
+            <summary>
+            The Rectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.RoundedRectangle.RadiusX">
+            <summary>
+            The radius on the x-axis of this RoundedRectangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.RoundedRectangle.RadiusY">
+            <summary>
+            The radius on the y-axis of this RoundedRectangle.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(GameOverlay.Drawing.Rectangle,System.Single)">
+            <summary>
+            Initializes a new RoundedRectangle structure using then given dimension and radius.
+            </summary>
+            <param name="rectangle">A Rectangle structure including the dimension of the rectangle.</param>
+            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(GameOverlay.Drawing.Rectangle,System.Single,System.Single)">
+            <summary>
+            Initializes a new RoundedRectangle structure using then given dimension and radius.
+            </summary>
+            <param name="rectangle">A Rectangle structure including the dimension of the rectangle.</param>
+            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
+            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new RoundedRectangle structure using then given dimension and radius.
+            </summary>
+            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new RoundedRectangle structure using then given dimension and radius.
+            </summary>
+            <param name="left">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="top">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="right">The x-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="bottom">The y-coordinate of the bottom-right corner of the Rectangle.</param>
+            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
+            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a RoundedRectangle and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.ToString">
+            <summary>
+            Converts this RoundedRectangle structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this RoundedRectangle</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new RoundedRectangle using the given dimension and radius.
+            </summary>
+            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="width">The width of the Rectangle.</param>
+            <param name="height">The height of the Rectangle.</param>
+            <param name="radius">A value indicating the radius of the corners of a RoundedRectangle.</param>
+            <returns>The RoundedRectangle this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.Create(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new RoundedRectangle using the given dimension and radius.
+            </summary>
+            <param name="x">The x-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the Rectangle.</param>
+            <param name="width">The width of the Rectangle.</param>
+            <param name="height">The height of the Rectangle.</param>
+            <param name="radiusX">A value indicating the radius on the x-axis of the corners of a RoundedRectangle.</param>
+            <param name="radiusY">A value indicating the radius on the y-axis of the corners of a RoundedRectangle.</param>
+            <returns>The RoundedRectangle this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.op_Implicit(GameOverlay.Drawing.RoundedRectangle)~SharpDX.Direct2D1.RoundedRectangle">
+            <summary>
+            Converts a RoundedRectangle structure to a SharpDX RoundedRectangle.
+            </summary>
+            <param name="rectangle">A RoundedRectangle struct</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.op_Equality(GameOverlay.Drawing.RoundedRectangle,GameOverlay.Drawing.RoundedRectangle)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.RoundedRectangle.op_Inequality(GameOverlay.Drawing.RoundedRectangle,GameOverlay.Drawing.RoundedRectangle)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.Triangle">
+            <summary>
+            Represents the dimension of a triangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Triangle.A">
+            <summary>
+            The lower-left Point of this Triangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Triangle.B">
+            <summary>
+            The lower-right Point of this Triangle.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Triangle.C">
+            <summary>
+            The upper-center Point of this Triangle.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.#ctor(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
+            <summary>
+            Initializes a new Triangle using the given Points.
+            </summary>
+            <param name="a">The lower-left Point of this Triangle.</param>
+            <param name="b">The lower-right Point of this Triangle.</param>
+            <param name="c">The upper-center Point of this Triangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initializes a new Triangle using the given Points.
+            </summary>
+            <param name="a_x">The x-coordinate of the lower-left Point of this Triangle.</param>
+            <param name="a_y">The y-coordinate of the lower-left Point of this Triangle.</param>
+            <param name="b_x">The x-coordinate of the lower-right Point of this Triangle.</param>
+            <param name="b_y">The y-coordinate lower-right Point of this Triangle.</param>
+            <param name="c_x">The x-coordinate of the upper-center Point of this Triangle.</param>
+            <param name="c_y">The y-coordinate upper-center Point of this Triangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new Triangle using the given Points.
+            </summary>
+            <param name="a_x">The x-coordinate of the lower-left Point of this Triangle.</param>
+            <param name="a_y">The y-coordinate of the lower-left Point of this Triangle.</param>
+            <param name="b_x">The x-coordinate of the lower-right Point of this Triangle.</param>
+            <param name="b_y">The y-coordinate lower-right Point of this Triangle.</param>
+            <param name="c_x">The x-coordinate of the upper-center Point of this Triangle.</param>
+            <param name="c_y">The y-coordinate upper-center Point of this Triangle.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Triangle and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.ToString">
+            <summary>
+            Converts this Triangle structure to a human-readable string.
+            </summary>
+            <returns>The string representation of this Triangle.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.op_Equality(GameOverlay.Drawing.Triangle,GameOverlay.Drawing.Triangle)">
+            <summary>
+            Determines whether two specified instances are equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Triangle.op_Inequality(GameOverlay.Drawing.Triangle,GameOverlay.Drawing.Triangle)">
+            <summary>
+            Determines whether two specified instances are not equal.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns><see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> do not represent the same value; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.IBrush">
+            <summary>
+            Represents a Brush used to draw with a Graphics surface.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.IBrush.Brush">
+            <summary>
+            Gets or sets the Brush
+            </summary>
+        </member>
+        <member name="T:GameOverlay.Drawing.Image">
+            <summary>
+            Represents an Image which can be drawn using a Graphics surface.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Drawing.Image.Bitmap">
+            <summary>
+            The SharpDX Bitmap
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Image.Width">
+            <summary>
+            Gets the width of this Image
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.Image.Height">
+            <summary>
+            Gets the height of this Image
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.#ctor(SharpDX.Direct2D1.RenderTarget,System.Byte[])">
+            <summary>
+            Initializes a new Image for the given device by using a byte[].
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="bytes">A byte[] containing image data.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.#ctor(SharpDX.Direct2D1.RenderTarget,System.String)">
+            <summary>
+            Initializes a new Image for the given device by using a file on disk.
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="path">The path to an image file on disk.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.#ctor(GameOverlay.Drawing.Graphics,System.Byte[])">
+            <summary>
+            Initializes a new Image for the given device by using a byte[].
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="bytes">A byte[] containing image data.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.#ctor(GameOverlay.Drawing.Graphics,System.String)">
+            <summary>
+            Initializes a new Image for the given device by using a file on disk.
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="path">The path to an image file on disk.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.Finalize">
             <summary>
             Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
             </summary>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.Dispose(System.Boolean)">
+        <member name="M:GameOverlay.Drawing.Image.Equals(System.Object)">
             <summary>
-            Releases all resources used by this Font.
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Image and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.Equals(GameOverlay.Drawing.Image)">
+            <summary>
+            Returns a value indicating whether two specified instances of Image represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.ToString">
+            <summary>
+            Converts this Image instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this Image.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Image.
             </summary>
             <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.Dispose">
+        <member name="M:GameOverlay.Drawing.Image.Dispose">
             <summary>
-            Releases all resources used by this Font.
+            Releases all resources used by this Image.
             </summary>
         </member>
-        <member name="M:GameOverlay.Drawing.Font.op_Implicit(GameOverlay.Drawing.Font)~SharpDX.DirectWrite.TextFormat">
+        <member name="M:GameOverlay.Drawing.Image.op_Implicit(GameOverlay.Drawing.Image)~SharpDX.Direct2D1.Bitmap">
             <summary>
-            Converts this Font to a Direct2D TextFormat.
+            Converts an Image to a SharpDX Bitmap.
             </summary>
-            <param name="font"></param>
+            <param name="image">The Image object.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Image.Equals(GameOverlay.Drawing.Image,GameOverlay.Drawing.Image)">
+            <summary>
+            Returns a value indicating whether two specified instances of Image represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Drawing.LinearGradientBrush">
+            <summary>
+            Represents a linear gradient brush used with a Graphics surface.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.LinearGradientBrush.Brush">
+            <summary>
+            Gets or sets the underlying Brush.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.LinearGradientBrush.Start">
+            <summary>
+            Gets or sets the start point of this LineatGradientBrush.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Drawing.LinearGradientBrush.End">
+            <summary>
+            Gets or sets the end point of this LineatGradientBrush.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.#ctor(SharpDX.Direct2D1.RenderTarget,GameOverlay.Drawing.Color[])">
+            <summary>
+            Initializes a new LinearGradientBrush using the target device and an Color[].
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="colors">The colors</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.#ctor(GameOverlay.Drawing.Graphics,GameOverlay.Drawing.Color[])">
+            <summary>
+            Initializes a new LinearGradientBrush using the target device and an Color[].
+            </summary>
+            <param name="device">The Graphics device.</param>
+            <param name="colors">The colors</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Finalize">
+            <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.SetRange(GameOverlay.Drawing.Point,GameOverlay.Drawing.Point)">
+            <summary>
+            Sets the range where the gradient gets applied.
+            </summary>
+            <param name="start">A Point structure inclduing the coordinates for the start point of this LinearGradientBrush.</param>
+            <param name="end">A Point structure inclduing the coordinates for the end point of this LinearGradientBrush.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.SetRange(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the range where the gradient gets applied.
+            </summary>
+            <param name="startX">The x-coordinate of the start point of this LinearGradientBrush.</param>
+            <param name="startY">The y-coordinate of the start point of this LinearGradientBrush.</param>
+            <param name="endX">The x-coordinate of the end point of this LinearGradientBrush.</param>
+            <param name="endY">The y-coordinate of the end point of this LinearGradientBrush.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a LinearGradientBrush and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Equals(GameOverlay.Drawing.LinearGradientBrush)">
+            <summary>
+            Returns a value indicating whether two specified instances of LinearGradientBrush represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.ToString">
+            <summary>
+            Converts this LinearGradientBrush instance to a human-readable string.
+            </summary>
+            <returns>A string representation of this LinearGradientBrush.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this LinearGradientBrush.
+            </summary>
+            <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Dispose">
+            <summary>
+            Releases all resources used by this LinearGradientBrush.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Drawing.LinearGradientBrush.Equals(GameOverlay.Drawing.LinearGradientBrush,GameOverlay.Drawing.LinearGradientBrush)">
+            <summary>
+            Returns a value indicating whether two specified instances of LinearGradientBrush represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
         </member>
         <member name="T:GameOverlay.Drawing.Scene">
             <summary>
-            Represents a Scene / Frame of a Graphics surface.
+            Represents a Scene / frame of a Graphics surface.
             </summary>
         </member>
         <member name="P:GameOverlay.Drawing.Scene.Device">
@@ -2045,6 +2488,32 @@
             Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
             </summary>
         </member>
+        <member name="M:GameOverlay.Drawing.Scene.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a Scene and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Scene.Equals(GameOverlay.Drawing.Scene)">
+            <summary>
+            Returns a value indicating whether two specified instances of Scene represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Scene.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.Scene.ToString">
+            <summary>
+            Converts this Scene to a human-readable string.
+            </summary>
+            <returns>A string representation of this Scene.</returns>
+        </member>
         <member name="M:GameOverlay.Drawing.Scene.Dispose(System.Boolean)">
             <summary>
             Releases all resources used by this Scene.
@@ -2061,6 +2530,14 @@
             Converts a Scene to a Graphics surface.
             </summary>
             <param name="scene">The Scene object.</param>
+        </member>
+        <member name="M:GameOverlay.Drawing.Scene.Equals(GameOverlay.Drawing.Scene,GameOverlay.Drawing.Scene)">
+            <summary>
+            Returns a value indicating whether two specified instances of Scene represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
         </member>
         <member name="T:GameOverlay.Drawing.SolidBrush">
             <summary>
@@ -2095,6 +2572,26 @@
             Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
             </summary>
         </member>
+        <member name="M:GameOverlay.Drawing.SolidBrush.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a SolidBrush and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.SolidBrush.Equals(GameOverlay.Drawing.SolidBrush)">
+            <summary>
+            Returns a value indicating whether two specified instances of SolidBrush represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Drawing.SolidBrush.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
         <member name="M:GameOverlay.Drawing.SolidBrush.ToString">
             <summary>
             Converts this SolidBrush to a human-readable string.
@@ -2118,620 +2615,17 @@
             </summary>
             <param name="brush">A SolidBrush.</param>
         </member>
-        <member name="T:GameOverlay.PInvoke.NativeMargin">
+        <member name="M:GameOverlay.Drawing.SolidBrush.Equals(GameOverlay.Drawing.SolidBrush,GameOverlay.Drawing.SolidBrush)">
             <summary>
-                <c>MARGIN</c> struct used with DwmApi
+            Returns a value indicating whether two specified instances of SolidBrush represent the same value.
             </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.WindowProc">
-            <summary>
-            An application-defined function that processes messages sent to a window.
-            </summary>
-            <param name="hWnd">A handle to the window. </param>
-            <param name="msg">The message.</param>
-            <param name="wParam">Additional message information. The contents of this parameter depend on the value of the uMsg parameter. </param>
-            <param name="lParam">Additional message information. The contents of this parameter depend on the value of the uMsg parameter. </param>
-            <returns>The return value is the result of the message processing and depends on the message sent.</returns>
-        </member>
-        <member name="T:GameOverlay.PInvoke.DpiAwareness">
-            <summary>
-            Identifies the dots per inch (dpi) setting for a thread, process, or window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwareness.Invalid">
-            <summary>
-            Invalid DPI awareness. This is an invalid DPI awareness value.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwareness.Unaware">
-            <summary>
-            This process does not scale for DPI changes and is always assumed to have a scale factor of 100% (96 DPI). It will be automatically scaled by the system on any other DPI setting.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwareness.SystemAware">
-            <summary>
-            This process does not scale for DPI changes. It will query for the DPI once and use that value for the lifetime of the process. If the DPI changes, the process will not adjust to the new DPI value. It will be automatically scaled up or down by the system when the DPI changes from the system value.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwareness.PerMonitorAware">
-            <summary>
-            This process checks for the DPI when it is created and adjusts the scale factor whenever the DPI changes. These processes are not automatically scaled by the system.
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.DpiAwarenessContext">
-            <summary>
-            Identifies the awareness context for a window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwarenessContext.Unaware">
-            <summary>
-            This window does not scale for DPI changes and is always assumed to have a scale factor of 100% (96 DPI). It will be automatically scaled by the system on any other DPI setting.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwarenessContext.SystemAware">
-            <summary>
-            This window does not scale for DPI changes. It will query for the DPI once and use that value for the lifetime of the process. If the DPI changes, the process will not adjust to the new DPI value. It will be automatically scaled up or down by the system when the DPI changes from the system value.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwarenessContext.PerMonitorAware">
-            <summary>
-            This window checks for the DPI when it is created and adjusts the scale factor whenever the DPI changes. These processes are not automatically scaled by the system.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwarenessContext.PerMonitorAwareV2">
-            <summary>
-            An advancement over the original per-monitor DPI awareness mode, which enables applications to access new DPI-related scaling behaviors on a per top-level window basis. Per Monitor v2 was made available in the Creators Update of Windows 10, and is not available on earlier versions of the operating system.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.DpiAwarenessContext.UnawareGdiScaled">
-            <summary>
-            DPI unaware with improved quality of GDI-based content. This mode behaves similarly to DPI_AWARENESS_CONTEXT_UNAWARE, but also enables the system to automatically improve the rendering quality of text and other GDI-based primitives when the window is displayed on a high-DPI monitor.
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.ExtendedWindowStyle">
-            <summary>
-                Extended Window Styles
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.AcceptFiles">
-            <summary>
-                The window accepts drag-drop files.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.AppWindow">
-            <summary>
-                Forces a top-level window onto the taskbar when the window is visible.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.ClientEdge">
-            <summary>
-                The window has a border with a sunken edge.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Composited">
-            <summary>
-                Paints all descendants of a window in bottom-to-top painting order using double-buffering. For more information,
-                see Remarks. This cannot be used if the window has a class style of either CS_OWNDC or CS_CLASSDC.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.ContextHelp">
-            <summary>
-                The title bar of the window includes a question mark. When the user clicks the question mark, the cursor changes to
-                a question mark with a pointer. If the user then clicks a child window, the child receives a WM_HELP message. The
-                child window should pass the message to the parent window procedure, which should call the WinHelp function using
-                the HELP_WM_HELP command. The Help application displays a pop-up window that typically contains help for the child
-                window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.ControlParent">
-            <summary>
-                The window itself contains child windows that should take part in dialog box navigation. If this style is
-                specified, the dialog manager recurses into children of this window when performing navigation operations such as
-                handling the TAB key, an arrow key, or a keyboard mnemonic.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.DlgModalFrame">
-            <summary>
-                The window has a double border; the window can, optionally, be created with a title bar by specifying the
-                WS_CAPTION style in the dwStyle parameter.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Layered">
-            <summary>
-                The window is a layered window. This style cannot be used if the window has a class style of either CS_OWNDC or
-                CS_CLASSDC.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.LayoutRtl">
-            <summary>
-                If the shell language is Hebrew, Arabic, or another language that supports reading order alignment, the horizontal
-                origin of the window is on the right edge. Increasing horizontal values advance to the left.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Left">
-            <summary>
-                The window has generic left-aligned properties. This is the default.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.LeftScrollbar">
-            <summary>
-                If the shell language is Hebrew, Arabic, or another language that supports reading order alignment, the vertical
-                scroll bar (if present) is to the left of the client area. For other languages, the style is ignored.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.LtrReading">
-            <summary>
-                The window text is displayed using left-to-right reading-order properties. This is the default.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.MdiChild">
-            <summary>
-                The window is a MDI child window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.NoActivate">
-            <summary>
-                A top-level window created with this style does not become the foreground window when the user clicks it. The
-                system does not bring this window to the foreground when the user minimizes or closes the foreground window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.NoInheritLayout">
-            <summary>
-                The window does not pass its window layout to its child windows.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.NoParentNotify">
-            <summary>
-                The child window created with this style does not send the WM_PARENTNOTIFY message to its parent window when it is
-                created or destroyed.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.NoRedirectionBitmap">
-            <summary>
-                The window does not render to a redirection surface. This is for windows that do not have visible content or that
-                use mechanisms other than surfaces to provide their visual.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.OverlappedWindow">
-            <summary>
-                The window is an overlapped window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.PaletteWindow">
-            <summary>
-                The window is palette window, which is a modeless dialog box that presents an array of commands.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Right">
-            <summary>
-                The window has generic "right-aligned" properties. This depends on the window class. This style has an effect only
-                if the shell language is Hebrew, Arabic, or another language that supports reading-order alignment; otherwise, the
-                style is ignored.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.RightScrollbar">
-            <summary>
-                The vertical scroll bar (if present) is to the right of the client area. This is the default.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.RtlReading">
-            <summary>
-                If the shell language is Hebrew, Arabic, or another language that supports reading-order alignment, the window text
-                is displayed using right-to-left reading-order properties. For other languages, the style is ignored.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.StaticEdge">
-            <summary>
-                The window has a three-dimensional border style intended to be used for items that do not accept user input.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.ToolWindow">
-            <summary>
-                The window is intended to be used as a floating toolbar. A tool window has a title bar that is shorter than a
-                normal title bar, and the window title is drawn using a smaller font. A tool window does not appear in the taskbar
-                or in the dialog that appears when the user presses ALT+TAB. If a tool window has a system menu, its icon is not
-                displayed on the title bar. However, you can display the system menu by right-clicking or by typing ALT+SPACE.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Topmost">
-            <summary>
-                The window should be placed above all non-topmost windows and should stay above them, even when the window is
-                deactivated. To add or remove this style, use the SetWindowPos function.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.Transparent">
-            <summary>
-                The window should not be painted until siblings beneath the window (that were created by the same thread) have been
-                painted. The window appears transparent because the bits of underlying sibling windows have already been painted.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ExtendedWindowStyle.WindowEdge">
-            <summary>
-                The window has a border with a raised edge.
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.LayeredWindowAttributes">
-            <summary>
-            Layered Window Attributes
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.LayeredWindowAttributes.None">
-            <summary>
-                The none
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.LayeredWindowAttributes.ColorKey">
-            <summary>
-                The color key
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.LayeredWindowAttributes.Alpha">
-            <summary>
-                The alpha
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.LayeredWindowAttributes.Opaque">
-            <summary>
-                The opaque
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.ShowWindowCommand">
-            <summary>
-            Controls how the window is to be shown.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ForceMinimize">
-            <summary>
-            Minimizes a window, even if the thread that owns the window is not responding. This flag should only be used when minimizing windows from a different thread. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.Hide">
-            <summary>
-            Hides the window and activates another window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.Maximize">
-            <summary>
-            Maximizes the specified window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.Minimize">
-            <summary>
-            Minimizes the specified window and activates the next top-level window in the Z order. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.Restore">
-            <summary>
-            Activates and displays the window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when restoring a minimized window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.Show">
-            <summary>
-            Activates the window and displays it in its current size and position. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowDefault">
-            <summary>
-            Sets the show state based on the SW_ value specified in the STARTUPINFO structure passed to the CreateProcess function by the program that started the application. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowMaximized">
-            <summary>
-            Activates the window and displays it as a maximized window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowMinimized">
-            <summary>
-            Activates the window and displays it as a minimized window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowMinNoActivate">
-            <summary>
-            Displays the window as a minimized window. This value is similar to SW_SHOWMINIMIZED, except the window is not activated. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowNA">
-            <summary>
-            Displays the window in its current size and position. This value is similar to SW_SHOW, except that the window is not activated. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowNoActivate">
-            <summary>
-            Displays a window in its most recent size and position. This value is similar to SW_SHOWNORMAL, except that the window is not activated. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.ShowWindowCommand.ShowNormal">
-            <summary>
-            Activates and displays a window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when displaying the window for the first time. 
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.SwpFlags">
-            <summary>
-            SetWindowPos flags
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.AsyncWindowPos">
-            <summary>
-            If the calling thread and the thread that owns the window are attached to different input queues, the system posts the request to the thread that owns the window. This prevents the calling thread from blocking its execution while other threads process the request. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.DeferErase">
-            <summary>
-            Prevents generation of the WM_SYNCPAINT message. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.DrawFrame">
-            <summary>
-            Draws a frame (defined in the window's class description) around the window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.FrameChanged">
-            <summary>
-            Applies new frame styles set using the SetWindowLong function. Sends a WM_NCCALCSIZE message to the window, even if the window's size is not being changed. If this flag is not specified, WM_NCCALCSIZE is sent only when the window's size is being changed. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.HideWindow">
-            <summary>
-            Hides the window. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoActivate">
-            <summary>
-            Does not activate the window. If this flag is not set, the window is activated and moved to the top of either the topmost or non-topmost group (depending on the setting of the hWndInsertAfter parameter). 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoCopyBits">
-            <summary>
-            Discards the entire contents of the client area. If this flag is not specified, the valid contents of the client area are saved and copied back into the client area after the window is sized or repositioned. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoMove">
-            <summary>
-            Retains the current position (ignores X and Y parameters). 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoOwnerZOrder">
-            <summary>
-            Does not change the owner window's position in the Z order. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoRedraw">
-            <summary>
-            Does not redraw changes. If this flag is set, no repainting of any kind occurs. This applies to the client area, the nonclient area (including the title bar and scroll bars), and any part of the parent window uncovered as a result of the window being moved. When this flag is set, the application must explicitly invalidate or redraw any parts of the window and parent window that need redrawing. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoReposition">
-            <summary>
-            Same as the SWP_NOOWNERZORDER flag. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoSendChanging">
-            <summary>
-            Prevents the window from receiving the WM_WINDOWPOSCHANGING message. 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoSize">
-            <summary>
-            Retains the current size (ignores the cx and cy parameters). 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.NoZOrder">
-            <summary>
-            Retains the current Z order (ignores the hWndInsertAfter parameter). 
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.SwpFlags.ShowWindow">
-            <summary>
-            Displays the window. 
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.WindowStyle">
-            <summary>
-                Window Styles
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Border">
-            <summary>
-                The window has a thin-line border.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Caption">
-            <summary>
-                The window has a title bar (includes the Border style).
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Child">
-            <summary>
-                The window is a child window. A window with this style cannot have a menu bar. This style cannot be used with the
-                Popup style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.ChildWindow">
-            <summary>
-                Same as the Child style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.ClipChildren">
-            <summary>
-                Excludes the area occupied by child windows when drawing occurs within the parent window. This style is used when
-                creating the parent window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.ClipSiblings">
-            <summary>
-                Clips child windows relative to each other; that is, when a particular child window receives a WM_PAINT message,
-                the ClipSiblings style clips all other overlapping child windows out of the region of the child window to be
-                updated. If ClipSiblings is not specified and child windows overlap, it is possible, when drawing within the client
-                area of a child window, to draw within the client area of a neighboring child window.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Disabled">
-            <summary>
-                The window is initially disabled. A disabled window cannot receive input from the user. To change this after a
-                window has been created, use the EnableWindow function.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.DlgFrame">
-            <summary>
-                The window has a border of a style typically used with dialog boxes. A window with this style cannot have a title
-                bar.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Group">
-            <summary>
-                The window is the first control of a group of controls. The group consists of this first control and all controls
-                defined after it, up to the next control with the Group style. The first control in each group usually has the
-                Tabstop style so that the user can move from group to group. The user can subsequently change the keyboard focus
-                from one control in the group to the next control in the group by using the direction keys.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.HScroll">
-            <summary>
-                The window has a horizontal scroll bar.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Iconic">
-            <summary>
-                The window is initially minimized. Same as the Minimize style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Maximize">
-            <summary>
-                The window is initially maximized.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.MaximizeBox">
-            <summary>
-                The window has a maximize button. Cannot be combined with the WS_EX_CONTEXTHELP style. The SysMenu style must also
-                be specified.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Minimize">
-            <summary>
-                The window is initially minimized. Same as the Iconic style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.MinimizeBox">
-            <summary>
-                The window has a minimize button. Cannot be combined with the WS_EX_CONTEXTHELP style. The SysMenu style must also
-                be specified.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Overlapped">
-            <summary>
-                The window is an overlapped window. An overlapped window has a title bar and a border. Same as the WS_TILED style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.OverlappedWindow">
-            <summary>
-                The window is an overlapped window. Same as the TiledWindow style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Popup">
-            <summary>
-                The windows is a pop-up window. This style cannot be used with the Child style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.PopupWindow">
-            <summary>
-                The window is a pop-up window. The Caption and PopupWindow styles must be combined to make the window menu visible.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Sizebox">
-            <summary>
-                he window has a sizing border. Same as the ThickFrame style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.SysMenu">
-            <summary>
-                The window has a window menu on its title bar. The Caption style must also be specified.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Tabstop">
-            <summary>
-                The window is a control that can receive the keyboard focus when the user presses the TAB key. Pressing the TAB key
-                changes the keyboard focus to the next control with the Tabstop style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.ThickFrame">
-            <summary>
-                The window has a sizing border. Same as the Sizebox style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Tiled">
-            <summary>
-                The window is an overlapped window. An overlapped window has a title bar and a border. Same as the Overlapped
-                style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.TiledWindow">
-            <summary>
-                The window is an overlapped window. Same as the OverlappedWindow style.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.Visible">
-            <summary>
-                The window is initially visible.
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.WindowStyle.VScroll">
-            <summary>
-                The window has a vertical scroll bar.
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.WindowMessage">
-            <summary>
-                All WindowMessages
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.Message">
-            <summary>
-                Contains a WindowsMessage
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.NativePoint">
-            <summary>
-                X and Y desktop coordinates
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.NativeRect">
-            <summary>
-                Contains Desktop Coordinates
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.NativeRect.Left">
-            <summary>
-                x position of upper-left corner
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.NativeRect.Top">
-            <summary>
-                x position of upper-left corner
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.NativeRect.Right">
-            <summary>
-                x position of lower-right corner
-            </summary>
-        </member>
-        <member name="F:GameOverlay.PInvoke.NativeRect.Bottom">
-            <summary>
-                y position of lower-right corner
-            </summary>
-        </member>
-        <member name="T:GameOverlay.PInvoke.WindowClassEx">
-            <summary>
-                Stores information for window creation
-            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
         </member>
         <member name="T:GameOverlay.Windows.GraphicsWindow">
             <summary>
-            Represents an OverlayWindow which sticks to a parent window and is used to draw at any given frame rate.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.GraphicsWindow.ParenWindowHandle">
-            <summary>
-            Gets or sets the window handle of the parent window.
+            Represents an OverlayWindow which is used to draw at any given frame rate.
             </summary>
         </member>
         <member name="P:GameOverlay.Windows.GraphicsWindow.Graphics">
@@ -2747,16 +2641,6 @@
         <member name="P:GameOverlay.Windows.GraphicsWindow.IsPaused">
             <summary>
             Gets or sets a Boolean which determines whether this instance is paused.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.GraphicsWindow.StickToClientArea">
-            <summary>
-            Gets or sets a Boolean which determines whether this instance sticks to the client aread of the parent window.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.GraphicsWindow.BypassTopmost">
-            <summary>
-            Gets or sets a Boolean which determines whether this instance place itself on top of the parent window.
             </summary>
         </member>
         <member name="P:GameOverlay.Windows.GraphicsWindow.FPS">
@@ -2779,18 +2663,21 @@
             Fires when you should allocate any resources you use to draw using this instance.
             </summary>
         </member>
-        <member name="M:GameOverlay.Windows.GraphicsWindow.#ctor(System.IntPtr)">
+        <member name="M:GameOverlay.Windows.GraphicsWindow.#ctor(GameOverlay.Drawing.Graphics)">
             <summary>
-            Initializes a new GraphicsWindow using a window handle.
+            Initializes a new GraphicsWindow.
             </summary>
-            <param name="parentWindow">The window handle of the parent window.</param>
+            <param name="device">Optionally specify a Graphics device to use.</param>
         </member>
-        <member name="M:GameOverlay.Windows.GraphicsWindow.#ctor(System.IntPtr,GameOverlay.Drawing.Graphics)">
+        <member name="M:GameOverlay.Windows.GraphicsWindow.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,GameOverlay.Drawing.Graphics)">
             <summary>
-            Initializes a new GraphicsWindow using a window handle and a Graphics surface.
+            Initializes a new GraphicsWindow with the specified window position and size.
             </summary>
-            <param name="parentWindow">The window handle of the parent window.</param>
-            <param name="device">A Graphics surface.</param>
+            <param name="x">The window position on the X-Axis.</param>
+            <param name="y">The window position on the Y-Axis.</param>
+            <param name="width">The width of the window.</param>
+            <param name="height">The height of the window.</param>
+            <param name="device">Optionally specify a Graphics device to use.</param>
         </member>
         <member name="M:GameOverlay.Windows.GraphicsWindow.Finalize">
             <summary>
@@ -2827,7 +2714,7 @@
             Waits until the Thread used by this instance has exited.
             </summary>
         </member>
-        <member name="M:GameOverlay.Windows.GraphicsWindow.OnPaintGraphics(GameOverlay.Drawing.Graphics)">
+        <member name="M:GameOverlay.Windows.GraphicsWindow.OnDrawGraphics(GameOverlay.Drawing.Graphics)">
             <summary>
             Gets called when the timer thread needs to render a new Scene / frame.
             </summary>
@@ -2850,6 +2737,54 @@
             Releases all resources used by this GraphicsWindow.
             </summary>
             <param name="disposing">A Boolean value indicating whether this is called from the destructor.</param>
+        </member>
+        <member name="T:GameOverlay.Windows.DrawGraphicsEventArgs">
+            <summary>
+            Provides data for the DrawGraphics event.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.DrawGraphicsEventArgs.Graphics">
+            <summary>
+            Gets the Graphics surface.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.DrawGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new DrawGraphicsEventArgs with a Graphics surface.
+            </summary>
+            <param name="graphics"></param>
+        </member>
+        <member name="T:GameOverlay.Windows.SetupGraphicsEventArgs">
+            <summary>
+            Provides data for the SetupGraphics event.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.SetupGraphicsEventArgs.Graphics">
+            <summary>
+            Gets the Graphics surface.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.SetupGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new SetupGraphicsEventArgs with a Graphics surface.
+            </summary>
+            <param name="graphics"></param>
+        </member>
+        <member name="T:GameOverlay.Windows.DestroyGraphicsEventArgs">
+            <summary>
+            Provides data for the DestroyGraphics event.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.DestroyGraphicsEventArgs.Graphics">
+            <summary>
+            Gets the Graphics surface.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.DestroyGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new DestroyGraphicsEventArgs with a Graphics surface.
+            </summary>
+            <param name="graphics"></param>
         </member>
         <member name="T:GameOverlay.Windows.OverlayWindow">
             <summary>
@@ -2950,6 +2885,11 @@
             Setup and initializes the window.
             </summary>
         </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.JoinWindowThread">
+            <summary>
+            Waits until the Thread used by this instance has exited.
+            </summary>
+        </member>
         <member name="M:GameOverlay.Windows.OverlayWindow.Show">
             <summary>
             Makes the window visible.
@@ -2983,6 +2923,19 @@
             <param name="width">The new width of the window.</param>
             <param name="height">The new height of the window.</param>
         </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.FitToWindow(System.IntPtr,System.Boolean)">
+            <summary>
+            Adapts to another window in the postion and size.
+            </summary>
+            <param name="windowHandle">The target window handle.</param>
+            <param name="attachToClientArea">A Boolean determining whether to fit to the client area of the target window.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.PlaceAboveWindow(System.IntPtr)">
+            <summary>
+            Places the OverlayWindow above the target window according to the windows z-order.
+            </summary>
+            <param name="windowHandle">The target window handle.</param>
+        </member>
         <member name="M:GameOverlay.Windows.OverlayWindow.OnSizeChanged(System.Int32,System.Int32)">
             <summary>
             Gets called whenever the size of the window changes.
@@ -3003,6 +2956,32 @@
             </summary>
             <param name="isVisible">A Boolean indicating the new visibility of the window.</param>
         </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a OverlayWindow and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.Equals(GameOverlay.Windows.OverlayWindow)">
+            <summary>
+            Returns a value indicating whether two specified instances of OverlayWindow represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.OverlayWindow.ToString">
+            <summary>
+            Converts this OverlayWindow structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this OverlayWindow.</returns>
+        </member>
         <member name="M:GameOverlay.Windows.OverlayWindow.Dispose(System.Boolean)">
             <summary>
             Releases all resources used by this OverlayWindow.
@@ -3014,81 +2993,13 @@
             Releases all resources used by this OverlayWindow.
             </summary>
         </member>
-        <member name="M:GameOverlay.Windows.WindowHelper.GenerateRandomClass">
+        <member name="M:GameOverlay.Windows.OverlayWindow.Equals(GameOverlay.Windows.OverlayWindow,GameOverlay.Windows.OverlayWindow)">
             <summary>
-            Generates a random window class name and respects the already used ones in the blacklist.
+            Returns a value indicating whether two specified instances of OverlayWindow represent the same value.
             </summary>
-            <returns>A window class name.</returns>
-        </member>
-        <member name="M:GameOverlay.Windows.WindowHelper.GetWindowRect(System.IntPtr,GameOverlay.PInvoke.NativeRect@)">
-            <summary>
-            Gets the boundaries of a window using its handle.
-            </summary>
-            <param name="hwnd">The handle of a window.</param>
-            <param name="rect">A NativeRect structure receiving the data.</param>
-            <returns>Whether this method succeeded.</returns>
-        </member>
-        <member name="M:GameOverlay.Windows.WindowHelper.GetWindowClient(System.IntPtr,GameOverlay.PInvoke.NativeRect@)">
-            <summary>
-            Gets the boundaries of a window client area using its handle.
-            </summary>
-            <param name="hwnd">The handle of a window.</param>
-            <param name="rect">A NativeRect structure receiving the data.</param>
-            <returns>Whether this method succeeded.</returns>
-        </member>
-        <member name="M:GameOverlay.Windows.WindowHelper.ExtendFrameIntoClientArea(System.IntPtr)">
-            <summary>
-            Extends the window frame into the client area.
-            </summary>
-            <param name="hwnd">The handle to the window in which the frame will be extended into the client area.</param>
-        </member>
-        <member name="T:GameOverlay.Windows.DrawGraphicsEventArgs">
-            <summary>
-            Provides data for the DrawGraphics event.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.DrawGraphicsEventArgs.Graphics">
-            <summary>
-            Gets the Graphics surface.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Windows.DrawGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
-            <summary>
-            Initializes a new DrawGraphicsEventArgs with a Graphics surface.
-            </summary>
-            <param name="graphics"></param>
-        </member>
-        <member name="T:GameOverlay.Windows.SetupGraphicsEventArgs">
-            <summary>
-            Provides data for the SetupGraphics event.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.SetupGraphicsEventArgs.Graphics">
-            <summary>
-            Gets the Graphics surface.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Windows.SetupGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
-            <summary>
-            Initializes a new SetupGraphicsEventArgs with a Graphics surface.
-            </summary>
-            <param name="graphics"></param>
-        </member>
-        <member name="T:GameOverlay.Windows.DestroyGraphicsEventArgs">
-            <summary>
-            Provides data for the DestroyGraphics event.
-            </summary>
-        </member>
-        <member name="P:GameOverlay.Windows.DestroyGraphicsEventArgs.Graphics">
-            <summary>
-            Gets the Graphics surface.
-            </summary>
-        </member>
-        <member name="M:GameOverlay.Windows.DestroyGraphicsEventArgs.#ctor(GameOverlay.Drawing.Graphics)">
-            <summary>
-            Initializes a new DestroyGraphicsEventArgs with a Graphics surface.
-            </summary>
-            <param name="graphics"></param>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
         </member>
         <member name="T:GameOverlay.Windows.OverlayVisibilityEventArgs">
             <summary>
@@ -3149,6 +3060,174 @@
             </summary>
             <param name="width">The new width of the window.</param>
             <param name="height">The new height of the window.</param>
+        </member>
+        <member name="T:GameOverlay.Windows.StickyWindow">
+            <summary>
+            Represents a StickyWindow which uses a GraphicsWindow sticks to a parent window.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.StickyWindow.ParentWindowHandle">
+            <summary>
+            Gets or Sets an IntPtr which is used to identify the parent window.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.StickyWindow.BypassTopmost">
+            <summary>
+            Gets or sets a Boolean which indicates wether to bypass the need of the windows Topmost flag.
+            </summary>
+        </member>
+        <member name="P:GameOverlay.Windows.StickyWindow.AttachToClientArea">
+            <summary>
+            Gets or sets a Boolean which indicates wether to stick to the parents client area.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyWindow.#ctor">
+            <summary>
+            Initializes a new StickyWindow with a default window position and size.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyWindow.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new StickyWindow with the given window position and size.
+            </summary>
+            <param name="x">The position of the window on the X-Axis of the desktop.</param>
+            <param name="y">The position of the window on the Y-Axis of the desktop.</param>
+            <param name="width">The width of the window.</param>
+            <param name="height">The height of the window.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyWindow.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new StickyWindow with the given window position and size and the window handle of the parent window.
+            </summary>
+            <param name="x">The position of the window on the X-Axis of the desktop.</param>
+            <param name="y">The position of the window on the Y-Axis of the desktop.</param>
+            <param name="width">The width of the window.</param>
+            <param name="height">The height of the window.</param>
+            <param name="parentWindow">An IntPtr representing the parent windows handle.</param>
+            <param name="device">Optionally specify a Graphics device to use.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyWindow.#ctor(System.IntPtr,GameOverlay.Drawing.Graphics)">
+            <summary>
+            Initializes a new StickyWindow with the ability to stick to a parent window.
+            </summary>
+            <param name="parentWindow">An IntPtr representing the parent windows handle.</param>
+            <param name="device">Optionally specify a Graphics device to use.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.StickyWindow.OnDrawGraphics(GameOverlay.Drawing.Graphics)">
+            <summary>
+            Gets called when the timer thread needs to render a new Scene / frame.
+            </summary>
+            <param name="graphics">A Graphics surface.</param>
+        </member>
+        <member name="T:GameOverlay.Windows.WindowBounds">
+            <summary>
+            Represents the boundaries of a window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.WindowBounds.Left">
+            <summary>
+            The position on the x-axis of the upper-left corner of a window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.WindowBounds.Top">
+            <summary>
+            The position on the y-axis of the upper-left corner of a window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.WindowBounds.Right">
+            <summary>
+            The position on the x-axis of the lower-right corner of a window.
+            </summary>
+        </member>
+        <member name="F:GameOverlay.Windows.WindowBounds.Bottom">
+            <summary>
+            The position on the y-axis of the lower-right corner of a window.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowBounds.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance and a specified <see cref="T:System.Object" /> represent the same type and value.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns><see langword="true" /> if <paramref name="obj" /> is a WindowBounds and equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowBounds.Equals(GameOverlay.Windows.WindowBounds)">
+            <summary>
+            Returns a value indicating whether two specified instances of WindowBounds represent the same value.
+            </summary>
+            <param name="value">An object to compare to this instance.</param>
+            <returns><see langword="true" /> if <paramref name="value" /> is equal to this instance; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowBounds.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowBounds.ToString">
+            <summary>
+            Converts this WindowBounds structure to a human-readable string.
+            </summary>
+            <returns>A string representation of this WindowBounds.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowBounds.Equals(GameOverlay.Windows.WindowBounds,GameOverlay.Windows.WindowBounds)">
+            <summary>
+            Returns a value indicating whether two specified instances of WindowBounds represent the same value.
+            </summary>
+            <param name="left">The first object to compare.</param>
+            <param name="right">The second object to compare.</param>
+            <returns> <see langword="true" /> if <paramref name="left" /> and <paramref name="right" /> are equal; otherwise, <see langword="false" />.</returns>
+        </member>
+        <member name="T:GameOverlay.Windows.WindowHelper">
+            <summary>
+            Provides methods to interact with windows.
+            </summary>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.GenerateRandomTitle">
+            <summary>
+            Generates a random window title.
+            </summary>
+            <returns>The string this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.GenerateRandomClass">
+            <summary>
+            Generates a random window class name.
+            </summary>
+            <returns>The string this method creates.</returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.MakeTopmost(System.IntPtr)">
+            <summary>
+            Adds the topmost flag to a window.
+            </summary>
+            <param name="hwnd">A IntPtr representing the handle of a window.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.RemoveTopmost(System.IntPtr)">
+            <summary>
+            Removes the topmost flag from a window.
+            </summary>
+            <param name="hwnd">A IntPtr representing the handle of a window.</param>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.GetWindowBounds(System.IntPtr,GameOverlay.Windows.WindowBounds@)">
+            <summary>
+            Returns the boundaries of a window.
+            </summary>
+            <param name="hwnd">A IntPtr representing the handle of a window.</param>
+            <param name="bounds">A WindowBounds structure representing the boundaries of a window.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.GetWindowClientBounds(System.IntPtr,GameOverlay.Windows.WindowBounds@)">
+            <summary>
+            Returns the boundaries of a windows client area.
+            </summary>
+            <param name="hwnd">A IntPtr representing the handle of a window.</param>
+            <param name="bounds">A WindowBounds structure representing the boundaries of a window.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GameOverlay.Windows.WindowHelper.ExtendFrameIntoClientArea(System.IntPtr)">
+            <summary>
+            Extends a windows frame into the client area of the window.
+            </summary>
+            <param name="hwnd">A IntPtr representing the handle of a window.</param>
         </member>
     </members>
 </doc>

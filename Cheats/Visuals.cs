@@ -1,7 +1,9 @@
-﻿using System;
-using System.Numerics;
-using GameOverlay.Drawing;
+﻿using GameOverlay.Drawing;
 using GameOverlay.Windows;
+using System;
+using System.Diagnostics;
+using System.Numerics;
+using ZBase;
 using ZBase.Classes;
 using ZBase.Utilities;
 using Color = System.Drawing.Color;
@@ -10,127 +12,95 @@ namespace ZBase.Cheats
 {
     public class Visuals
     {
-        #region dx shid
-        private OverlayWindow _window;
-        private Graphics _graphics;
-
-        public object Globals { get; private set; }
+        #region things
+        private readonly GraphicsWindow _window;
 
         public Visuals()
         {
-            _window = new OverlayWindow(Main.ScreenRect.left, Main.ScreenRect.top, Main.ScreenSize.Width, Main.ScreenSize.Height)
-            {
-                IsTopmost = true,
-                IsVisible = true
-            };
-            _window.SizeChanged += _window_SizeChanged;
-            _graphics = new Graphics()
+            // initialize a new Graphics object
+            // GraphicsWindow will do the remaining initialization
+            var graphics = new Graphics
             {
                 MeasureFPS = true,
-                Height = _window.Height,
                 PerPrimitiveAntiAliasing = true,
                 TextAntiAliasing = true,
                 UseMultiThreadedFactories = false,
                 VSync = true,
-                Width = _window.Width,
                 WindowHandle = IntPtr.Zero
             };
-        }
 
-        ~Visuals()
-        {
-            _graphics.Dispose();
-            _window.Dispose();
-        }
-
-        public void Initialize()
-        {
-            _window.CreateWindow();
-            _graphics.WindowHandle = _window.Handle; // set the target handle before calling Setup()
-            _graphics.Setup();
-        }
-
-        private void _window_SizeChanged(object sender, OverlaySizeEventArgs e)
-        {
-            if (_graphics == null) return;
-
-            if (_graphics.IsInitialized)
+            // it is important to set the window to visible (and topmost) if you want to see it!
+            _window = new StickyWindow(Memory.Process.MainWindowHandle, graphics)
             {
-                // after the Graphics surface is initialized you can only use the Resize method in order to enqueue a size change
-                _graphics.Resize(e.Width, e.Height);
-            }
-            else
-            {
-                // otherwise just set its members
-                _graphics.Width = e.Width;
-                _graphics.Height = e.Height;
-            }
+                IsTopmost = true,
+                IsVisible = true,
+                FPS = 144,
+                X = Main.ScreenRect.left,
+                Y = Main.ScreenRect.top,
+                Width = Main.ScreenSize.Width,
+                Height = Main.ScreenSize.Height
+            };
+
+            _window.DrawGraphics += _window_DrawGraphics;
         }
-        #endregion
+
         public void Run()
         {
-            #region things
-            var gfx = _graphics;
-            SolidBrush GetBrushColor(Color color)
-            {
-                return gfx.CreateSolidBrush(color.R, color.G, color.B, color.A);
-            }
-            #endregion
-            #region Draw
-            while (true)
-            {
-                gfx.BeginScene();
-                gfx.ClearScene();
-                // start drawings here
+            // creates the window and setups the graphics
+            _window.StartThread();
+        }
 
-                DrawTextWithOutline("ZBase", 10, 5, 25, Color.DeepSkyBlue, Color.Black, true, true);
-                if (Main.S.ESP)
+        #endregion
+        private void _window_DrawGraphics(object sender, DrawGraphicsEventArgs e)
+        {
+            var gfx = e.Graphics;
+            gfx.ClearScene();
+
+            DrawTextWithOutline("ZBase", 10, 5, 25, Color.DeepSkyBlue, Color.Black, true, true);
+            if (Main.S.ESP)
+            {
+                foreach (Entity Player in G.EntityList)
                 {
-                    foreach (Entity Player in G.EntityList)
+                    if (Player.EntityBase != G.Engine.LocalPlayer.EntityBase)
                     {
-                        if (Player.EntityBase != G.Engine.LocalPlayer.EntityBase)
+                        Vector2 Player2DPos = Tools.WorldToScreen(new Vector3(Player.Position.X, Player.Position.Y, Player.Position.Z - 5));
+                        Vector2 Player2DHeadPos = Tools.WorldToScreen(new Vector3(Player.HeadPosition.X, Player.HeadPosition.Y, Player.HeadPosition.Z + 10));
+                        if (!Tools.IsNullVector2(Player2DPos) && !Tools.IsNullVector2(Player2DHeadPos) && Player.Valid)
                         {
-                            Vector2 Player2DPos = Tools.WorldToScreen(new Vector3(Player.Position.X, Player.Position.Y, Player.Position.Z - 5));
-                            Vector2 Player2DHeadPos = Tools.WorldToScreen(new Vector3(Player.HeadPosition.X, Player.HeadPosition.Y, Player.HeadPosition.Z + 10));
-                            if (!Tools.IsNullVector2(Player2DPos) && !Tools.IsNullVector2(Player2DHeadPos) && Player.Valid)
-                            {
-                                float BoxHeight = Player2DPos.Y - Player2DHeadPos.Y;
-                                float BoxWidth = (BoxHeight / 2) * 1.25f; //little bit wider box
+                            float BoxHeight = Player2DPos.Y - Player2DHeadPos.Y;
+                            float BoxWidth = (BoxHeight / 2) * 1.25f; //little bit wider box
 
-                                Color drawcolor;
-                                if (Player.IsTeammate)
-                                    drawcolor = Color.Blue;
-                                else
-                                    drawcolor = Color.Red;
+                            Color drawcolor;
+                            if (Player.IsTeammate)
+                                drawcolor = Color.Blue;
+                            else
+                                drawcolor = Color.Red;
 
-                                #region Box
-                                DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
-                                //DrawFillOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, Color.FromArgb(50, 198, 198, 198));
-                                //DrawBoxEdge(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, 1);
-                                #endregion
-                                #region Health Bar
-                                float Health = Player.Health;
-                                Color HealthColor = Tools.HealthGradient(Tools.HealthToPercent((int)Health));
-                                float x = Player2DPos.X - (BoxWidth / 2) - 8;
-                                float y = Player2DHeadPos.Y;
-                                float w = 4;
-                                float h = BoxHeight;
-                                float HealthHeight = (Health * h) / 100;
+                            #region Box
+                            DrawOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor);
+                            //DrawFillOutlineBox(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, Color.FromArgb(50, 198, 198, 198));
+                            //DrawBoxEdge(Player2DPos.X - (BoxWidth / 2), Player2DHeadPos.Y, BoxWidth, BoxHeight, drawcolor, 1);
+                            #endregion
+                            #region Health Bar
+                            float Health = Player.Health;
+                            Color HealthColor = Tools.HealthGradient(Tools.HealthToPercent((int)Health));
+                            float x = Player2DPos.X - (BoxWidth / 2) - 8;
+                            float y = Player2DHeadPos.Y;
+                            float w = 4;
+                            float h = BoxHeight;
+                            float HealthHeight = (Health * h) / 100;
 
-                                DrawBox(x, y, w, h, Color.Black, 1);
-                                DrawFilledBox(x + 1, y + 1, 2, HealthHeight - 1, HealthColor);
-                                #endregion
-                                #region Snaplines
-                                DrawLine(Main.MidScreen.X, Main.MidScreen.Y + Main.MidScreen.Y, Player2DPos.X, Player2DPos.Y, drawcolor);
-                                #endregion
-                            }
+                            DrawBox(x, y, w, h, Color.Black, 1);
+                            DrawFilledBox(x + 1, y + 1, 2, HealthHeight - 1, HealthColor);
+                            #endregion
+                            #region Snaplines
+                            DrawLine(Main.MidScreen.X, Main.MidScreen.Y + Main.MidScreen.Y, Player2DPos.X, Player2DPos.Y, drawcolor);
+                            #endregion
                         }
                     }
                 }
-                //end drawings
-                gfx.EndScene();
             }
-            #endregion
+
             #region drawing functions
             void DrawBoxEdge(float x, float y, float width, float height, Color color, float thiccness = 2.0f)
             {
@@ -141,14 +111,14 @@ namespace ZBase.Cheats
             {
                 if (Tools.InScreenPos(x, y))
                 {
-                    gfx.DrawText(_graphics.CreateFont("Arial", size, bold, italic), GetBrushColor(color), x, y, text);
+                    gfx.DrawText(gfx.CreateFont("Arial", size, bold, italic), GetBrushColor(color), x, y, text);
                 }
             }
 
             void DrawTextWithOutline(string text, float x, float y, int size, Color color, Color outlinecolor, bool bold = true, bool italic = false)
             {
-                DrawText(text, x-1, y+1, size, outlinecolor, bold, italic);
-                DrawText(text, x+1, y+1, size, outlinecolor, bold, italic);
+                DrawText(text, x - 1, y + 1, size, outlinecolor, bold, italic);
+                DrawText(text, x + 1, y + 1, size, outlinecolor, bold, italic);
                 DrawText(text, x, y, size, color, bold, italic);
             }
 
@@ -156,7 +126,7 @@ namespace ZBase.Cheats
             {
                 if (Tools.InScreenPos(x, y))
                 {
-                    gfx.DrawTextWithBackground(_graphics.CreateFont("Arial", size, bold, italic), GetBrushColor(color), GetBrushColor(backcolor), x, y, text);
+                    gfx.DrawTextWithBackground(gfx.CreateFont("Arial", size, bold, italic), GetBrushColor(color), GetBrushColor(backcolor), x, y, text);
                 }
             }
 
@@ -198,6 +168,11 @@ namespace ZBase.Cheats
             void DrawRoundedBox(float x, float y, float width, float height, float radius, Color color, float thiccness = 2.0f)
             {
                 gfx.DrawRoundedRectangle(GetBrushColor(color), x, y, x + width, y + height, radius, thiccness);
+            }
+
+            SolidBrush GetBrushColor(Color color)
+            {
+                return gfx.CreateSolidBrush(color.R, color.G, color.B, color.A);
             }
             #endregion
         }

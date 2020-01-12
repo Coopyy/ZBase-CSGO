@@ -91,7 +91,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(360, 23);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Have Fun! - Coopyy";
+            this.label4.Text = "- Coopyy";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ESPCheck

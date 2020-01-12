@@ -43,7 +43,6 @@ namespace ZBase
                 {
                     Thread.CurrentThread.IsBackground = true;
                     Visuals v = new Visuals();
-                    v.Initialize();
                     v.Run();
                 }).Start();
                 #endregion
