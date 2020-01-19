@@ -1,5 +1,5 @@
 # ZBase-CSGO
-A C# CS:GO Cheat base, with sample bunnyhop.\
+A C# CS:GO Cheat base, with sample bunnyhop & overlay esp.
 
 ![yes](https://cdn.discordapp.com/attachments/435943050410196993/668328635345666058/unknown.png)
 
