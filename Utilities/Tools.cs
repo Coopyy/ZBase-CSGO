@@ -13,7 +13,7 @@ namespace ZBase.Utilities
 {
     public class Tools
     {
-        public static IntPtr handle = Memory.FindWindow(null, "Counter-Strike: Global Offensive");
+        public static IntPtr handle = Memory.FindWindow(null, "Counter-Strike: Global Offensive - Direct3D 9");
         public static void InitializeGlobals()
         {
             new Thread(() =>
