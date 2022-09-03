@@ -29,7 +29,7 @@ namespace ZBase
                 Memory.ProcessHandle = Memory.OpenProcess(0x0008 | 0x0010 | 0x0020, false, Memory.Process.Id);
                 foreach (ProcessModule Module in Memory.Process.Modules)
                 {
-                    if ((Module.ModuleName == "client_panorama.dll"))
+                    if ((Module.ModuleName == "client.dll"))
                         Memory.Client = Module.BaseAddress;
 
                     if ((Module.ModuleName == "engine.dll"))
